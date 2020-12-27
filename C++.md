@@ -1,0 +1,43 @@
+# C++
+
+C++ is a compiled programming language, much like java the code must first be compiled before it can be run.
+
+- To comile a .cpp file, exec `g++ <file path>`, g++ will then generate an executable file and you then run the file like you would a script, e.g. `./<executable name>` The executable name will be `a.out` if the `-o` flag is not specified to give the executable a name.
+More here on compiling options: https://courses.cs.washington.edu/courses/cse373/99au/unix/g++.html
+
+- Name convention is essentially the same as python!
+- `*` means a reference and `**` means a reference to a reference (usually used for arrays).
+- `strcmp()` is used to compare two strings, outputs 0 if they are the same.
+- `strcpy()` copies contents of string2 into string1.
+- `malloc()` allocates uninitialised memory.
+- `calloc()` allocates uninitialised array block.
+- use `const char*` to represent immutable strings. use "string" for mutability.
+- use of str-() funcs require casting of `(char*)` becuase that is the type they accept.
+- we can define constants using `#define CONSTANT_NAME constant_value`.
+- c++ class structure is like:
+
+```
+class MyClass {
+  private:
+    const char* private_string;
+  public:
+    const char* public_string;
+
+    MyClass() {
+      // Init code.
+    }
+    ~MyClass() { // Note ~ is a bitwise not. this runs AUTOMATICALLY when the insatnce is out of scope!
+      // De-init code.
+    }
+};
+```
+
+- `unsigned long` will not store negative values making the effective range from 0 to `4,294,967,295 (2^32 - 1)`
+- instance accessing is done via `->`, e.g `my_class->public_string = "Penner!";`
+- the `this` keyword is used but it is not necessary unless there may be a naming clash. so inside `MyClass` it would be fine to write `public_string = "General Kenobi!!"`
+- the `free(void *)` function frees a reference from memory!
+
+E.g.
+
+- `g++ -o question-1.1 ./question-1.1.cpp`
+- `./question-1.1`
