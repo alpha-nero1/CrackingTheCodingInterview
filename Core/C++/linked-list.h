@@ -4,8 +4,8 @@
 #include <iostream>
 
 template<class T>
-struct node {
-	node<T>* next;
+struct Node {
+	Node<T>* next;
 	T data;
 };
 
@@ -13,8 +13,8 @@ template<class T>
 class LinkedList
 {
 public:
-	node<T>* first;
-	node<T>* last;
+	Node<T>* first;
+	Node<T>* last;
 	LinkedList<T>() {
 		first = NULL;
 		last = NULL;
@@ -23,7 +23,7 @@ public:
 	void add(T data) {
 		if(!first) {
 			// The list is empty
-			first = new node<T>;
+			first = new Node<T>;
 			first->data = data;
 			first->next = NULL;
 			last = first;
@@ -31,13 +31,13 @@ public:
 			// The list isn't empty
 			if(last == first) {
 				// The list has one element
-				last = new node<T>;
+				last = new Node<T>;
 				last->data = data;
 				last->next = NULL;
 				first->next = last;
 			} else {
 				// The list has more than one element
-				node<T>* insdata = new node<T>;
+				Node<T>* insdata = new Node<T>;
 				insdata->data = data;
 				insdata->next = NULL;
 				last->next = insdata;
@@ -52,7 +52,7 @@ public:
 			return this->first->data;
 		} else {
 			// Get the index'th element
-			node<T>* curr = this->first;
+			Node<T>* curr = this->first;
 			for(int i = 0; i < index; ++i) {
 				curr = curr->next;
 			}
@@ -64,4 +64,13 @@ public:
 		return get(index);
 	}
 
+	~LinkedList<T>() {
+		Node<T>* tempNode = first;
+		// Go through the linked list and free up the nodes.
+		while (tempNode) {
+			tempNode = tempNode->next;
+			free(tempNode->data);
+			free(tempNode);
+		}
+	}
 };

@@ -1,5 +1,6 @@
 # Cracking The Coding Interview.
-
+https://github.com/alpha-nero1/CrackingTheCodingInterview
+&nbsp;
 In this folder I will complete all 189 of cracking the coding interviews algorithms. My main language for doing so is JavaScript. For bonus points I will include the same solutions in different languages.
 
 &nbsp;
@@ -17,3 +18,7 @@ I will mainly work in JavaScript but I am committing now to do a solution in all
 In that order of priority ^
 
 - Revisit 1.7, the swapping hath confused me greatly.
+
+Goals:
+- Create hashtable implmentation in each language.
+left: C# (almost there), C++
