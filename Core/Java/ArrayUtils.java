@@ -1,6 +1,15 @@
 import java.util.Arrays;
 
 class ArrayUtils {
+
+  public static <T> T[] Append(T item, T[] array) {
+    if (array != null) {
+      T[] incrementedCopy = Arrays.copyOf(array, array.length + 1);
+      incrementedCopy[incrementedCopy.length - 1] = item;
+      return incrementedCopy;
+    }
+    return array;
+  }
   
   public static Object[][] AppendNestedArray(Object[] item, Object[][] array) {
     if (array != null) {

@@ -42,6 +42,7 @@ class MyClass {
 - the `this` keyword is used but it is not necessary unless there may be a naming clash. so inside `MyClass` it would be fine to write `public_string = "General Kenobi!!"`
 
 - in c++ allocating memory is a little different to what it is in c. in c++ we can simply create variables as normal then use the 'delete' or 'delete[]' keyword to free them up later.
+- My key takeaways from the c++ imp is that c++ actually isn't all that bad because you can use constructors and deconstructors and do not need to worry about the allocating and deallocating memory functions directly, although you do need to be weary of the memory allocation.
 
 E.g.
 

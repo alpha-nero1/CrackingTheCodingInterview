@@ -27,11 +27,15 @@ class StackList {
   }
 
   pop() {
-    if (this.last.value === this.min()) {
-      this._minArr.pop();
+    let deleted = this.last;
+    if (this.last) {
+      if (this.last.value === this.min()) {
+        this._minArr.pop();
+      }
+      this.last = this.last.prev;
+      this._count--;
     }
-    this.last = this.last.prev;
-    this._count--;
+    return deleted;
   }
 
   count() {
@@ -43,7 +47,27 @@ class StackList {
   }
 
   isEmpty() {
-    return !!this.last
+    return !this.last
+  }
+
+  forEach(callback) {
+    let n = this.last;
+    let items = [];
+    while (n) {
+      items.unshift(n);
+      n = n.prev;
+    }
+    return items.forEach(callback);
+  }
+
+  toString() {
+    let str = 'nodes:\n';
+    let node = this.last;
+    while (node) {
+      str += `- node: ${node.value} (n: ${node.next ? node.next.value : null}, p: ${node.prev ? node.prev.value : null})\n`
+      node = node.prev;
+    }
+    return str;
   }
 }
 

@@ -1,7 +1,7 @@
 // Tree node class.
 
 class TreeNode {
-  constructor(parent, value, od) {
+  constructor(parent, value, id) {
     this._id = id;
     this._parent = parent;
     this._value = value;
@@ -40,3 +40,5 @@ class TreeNode {
     this._children = this._children.filter((c, i) => i !== index);
   }
 }
+
+module.exports = { TreeNode }
