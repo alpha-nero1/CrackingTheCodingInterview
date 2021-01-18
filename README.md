@@ -30,12 +30,10 @@ Progress:
 - Chapter 3.4 ✅
 - Chapter 3.5 ✅
 - Chapter 3.6 ✅
+(Struggled a bit with chapter 4, should look again after all is done)
 - 4.1 ✅ 
 - 4.2 ✅ - needed help, do in JS [✅]
 - 4.3 ✅
 - 4.4 ✅ - do in py [✅].
 - 4.5 ✅ - do in swift [✅].
 - 4.6 - 4.12 ✅ (4.12 optimal solution was confusing, re-address later.)
-
-Notes:
-- Understand the chapter concepts before beginning the questions. If it gives you implementations of data structures or common algorithms, implement them yourself and make sure you get how it all works and flows. Otherwise, you will struggle with the questions for sure.
