@@ -29,6 +29,3 @@ print("decimal_to_binary 0.72", decimal_to_binary(0.72))
 print("decimal_to_binary 0.67", decimal_to_binary(0.67))
 print("decimal_to_binary 0.95", decimal_to_binary(0.95))
 print("decimal_to_binary 0.94", decimal_to_binary(0.94))
-  
-
-
