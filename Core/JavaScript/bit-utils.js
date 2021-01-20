@@ -85,7 +85,7 @@ class BitUtils {
         // Shift the acc value left by 1 bit on each loop
         // and OR with the current binary value to insert it.
         // Oh thats ffin' cheeky!
-        accValue = (accValue << 1) | +binaryStr[i];
+        accValue = (accValue << 1) | +binaryStr.charAt(i);
       }
       return accValue;
     }
@@ -97,11 +97,16 @@ class BitUtils {
    *
    * @param { Number } integer integer to convert.
    */
-  static IntToBinary(integer) {
+  static IntToBinary(integer, bit32 = true) {
     // The unsigned bitwise >>> shifts elements to the right.
     // Doing >>> by 0 will coerce the value to an unsigned int binary representation
     // of the negative value.
-    return (integer >>> 0).toString(2);
+    const str = (integer >>> 0).toString(2);
+    if (bit32) {
+      const zerosPadding = (32 - str.length) > 0 ? (32 - str.length) : 0
+      return str.padStart(zerosPadding, "0")
+    }
+    return str;
   }
 }
 

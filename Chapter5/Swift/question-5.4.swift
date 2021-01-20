@@ -46,21 +46,22 @@ func getPrevHighest(num: Int) -> Int {
   var c0 = 0;
   var c1 = 0;
 
-  while ((c & 1) == 1) { // get num of 1s
+  while ((c & 1) == 1) { // get num of 1s FIRST
     c1 += 1;
     c >>= 1;
   }
 
-  while ((c & 1) == 0 && c != 0) { // get num of 1s
+  while ((c & 1) == 0 && c != 0) { // get num of 0s SECOND
     c0 += 1;
     c >>= 1;
   }
 
   let p = c1 + c0;
-  // Flip p
-  val &= (~0 << (p + 1)); // seq of 1s shifted to p + 1
-  let mask = 1 << (c1 + 1) - 1; // seq of c1 + 1 1s.
-  val |= mask << (c0 - 1)
+  // Flip p (e.g p= 5, c1 = 2, c0 = 5)
+  val &= (~0 << (p + 1)); // seq of 1s shifted = 11000000
+  let mask = 1 << (c1 + 1) - 1; // seq of c1 + 1 1s. = 00000011
+  val |= mask << (c0 - 1) // Shift over to where the 0s ended minues one, giving a lower shifted value.
+  // = 00110000 >
   return val;
 }
 
