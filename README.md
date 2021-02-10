@@ -37,3 +37,5 @@ Progress:
 - 4.4 ✅ - do in py [✅].
 - 4.5 ✅ - do in swift [✅].
 - 4.6 - 4.12 ✅ (4.12 optimal solution was confusing, re-address later.)
+...
+- 7.2 ✅
