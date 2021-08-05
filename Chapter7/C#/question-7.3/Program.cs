@@ -6,6 +6,8 @@ using System.Threading;
 using System.Threading.Tasks;
 
 // Task: Create a musical jukebox using OOP.
+// If I were to redo this I would just have the song store the song data
+// like an array of strings and the jukebox prints the lines of the array.
 
 namespace C_
 {
