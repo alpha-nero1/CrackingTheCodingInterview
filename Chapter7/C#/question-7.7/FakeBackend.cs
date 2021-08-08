@@ -52,7 +52,7 @@ namespace question_7._7
         // Add the message and notify other clients.
         public void PushMessage(string fromUsername, string toUsername, string text)
         {
-            Console.WriteLine("Pushing message");
+            Console.WriteLine($"Pushing message {text} to {toUsername}");
             var newMessage = new Message
             {
                 ToUsername = toUsername,
@@ -68,7 +68,8 @@ namespace question_7._7
         {
             foreach (var x in _connectedClients.Values)
             {
-                if (x.LoggedInUser.Username == fromUsername) return;
+                // Hey man use 'continue' in loops and not return!
+                if (x.LoggedInUser.Username == fromUsername) continue;
                 Console.WriteLine($"Sending message to: {x.LoggedInUser.Username} from {fromUsername}");
                 x.AcceptMessage(message);
             }
