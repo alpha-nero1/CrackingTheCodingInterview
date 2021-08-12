@@ -39,3 +39,9 @@ Progress:
 - 4.6 - 4.12 ✅ (4.12 optimal solution was confusing, re-address later.)
 ...
 - 7.2 ✅
+- 7.3 ✅
+- 7.4 ✅
+- 7.5 ✅
+- 7.6 ✅
+- 7.7 ✅
+- 7.8 ✅
