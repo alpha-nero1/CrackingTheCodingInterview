@@ -51,5 +51,10 @@
         "stdexcept": "cpp",
         "streambuf": "cpp",
         "typeinfo": "cpp"
+    },
+    "editor.tokenColorCustomizations": {
+        "[Tokyo Night Storm]": {
+            "comments": "#4cd963d2"
+        }
     }
 }

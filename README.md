@@ -46,3 +46,9 @@ Progress:
 - 7.7 ✅
 - 7.8 ✅
 - 7.9 ✅ (Done but really cool concept, revisit later)
+
+## Nice VSCode shortcuts.
+- `home`: cursor to start of line.
+- `end`: cursor to end of line.
+- `ctl + l`: highlight current line.
+- `shift + alt + down`: copy same line down.

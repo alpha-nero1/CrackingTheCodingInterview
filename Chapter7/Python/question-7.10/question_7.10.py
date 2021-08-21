@@ -27,19 +27,24 @@ class Board():
             ret_array[1] = i
         return ret_array
 
+
     def __move_right(self, x, y, pos):
         return self.__move_x(x, y, pos)
 
+
     def __move_down(self, x, y, pos):
         return self.__move_y(x, y, pos)
+
 
     def __move_left(self, x, y, pos):
         print('hey', x, y, pos * -1)
         return self.__move_x(x, y, (pos * -1))
 
+
     def __move_up(self, x, y, pos):
         print('hey 2', x, y, pos * -1)
         return self.__move_y(x, y, (pos * -1))
+
 
     def __circle_location(self, x, y, layer = 1):
         item = self.locations[x][y]
