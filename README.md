@@ -46,6 +46,9 @@ Progress:
 - 7.7 ✅
 - 7.8 ✅
 - 7.9 ✅ (Done but really cool concept, revisit later)
+...
+- 8.1 ✅
+- 8.2 ✅
 
 ## Nice VSCode shortcuts.
 - `home`: cursor to start of line.
