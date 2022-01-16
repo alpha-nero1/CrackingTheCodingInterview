@@ -22,33 +22,10 @@ In that order of priority ^
 Goals:
 - Create hashtable implmentation in each language. JS ✅, PY ✅, Swift ✅, Java ✅, C# ✅, C++ ✅
 
-Progress:
-(If marked with redo means I struggled and should do again in another lang to solidify understanding)
-- Chapter 1 ✅
-- Chapter 2 ✅
-- Chapter 3.3 ✅
-- Chapter 3.4 ✅
-- Chapter 3.5 ✅
-- Chapter 3.6 ✅
-(Struggled a bit with chapter 4, should look again after all is done)
-- 4.1 ✅ 
-- 4.2 ✅ - needed help, do in JS [✅]
-- 4.3 ✅
-- 4.4 ✅ - do in py [✅].
-- 4.5 ✅ - do in swift [✅].
-- 4.6 - 4.12 ✅ (4.12 optimal solution was confusing, re-address later.)
-...
-- 7.2 ✅
-- 7.3 ✅
-- 7.4 ✅
-- 7.5 ✅
-- 7.6 ✅
-- 7.7 ✅
-- 7.8 ✅
-- 7.9 ✅ (Done but really cool concept, revisit later)
-...
-- 8.1 ✅
-- 8.2 ✅
+
+Core Progress (3 questions from each chapter):
+- Remember that chapters 1-8 have been done to completion.
+31 / 51 (60.7)
 
 ## Nice VSCode shortcuts.
 - `home`: cursor to start of line.
