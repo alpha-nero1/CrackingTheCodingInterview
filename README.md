@@ -3,30 +3,28 @@ https://github.com/alpha-nero1/CrackingTheCodingInterview
 &nbsp;
 In this folder I will complete all 189 of cracking the coding interviews algorithms. My main language for doing so is JavaScript. For bonus points I will include the same solutions in different languages.
 
-&nbsp;
-
 Questions will be answered in:
-- JavaScript
 - Python
+- JavaScript
+- C#
 - Java
 - Swift
-- C#
 - C++
 
-I will mainly work in JavaScript but I am committing now to do a solution in all other languages "AT LEAST" once a week.
+Questions will mainly be done in JavaScript, Python and C# as they are awesome languages (and the ones I find have the most use to me). I will, however, occasionally dabble in Java, Swift and C++ as they are important but I wouldn't find myself using them on the day-to-day.
 
-In that order of priority ^
-
-- Revisit 1.7, the swapping hath confused me greatly.
-
-Goals:
+## Goals:
 - Create hashtable implmentation in each language. JS ✅, PY ✅, Swift ✅, Java ✅, C# ✅, C++ ✅
 
 
-Core Progress (3 questions from each chapter):
+## Core Progress (3 questions from each chapter):
 - Remember that chapters 1-8 have been done to completion.
 - 31 / 51 (60.7)
 - 34 / 51 (66.6)
+
+## Total Progress.
+first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
+- 62 + 11 = 73 / 189 (38.6)
 
 ## Nice VSCode shortcuts.
 - `home`: cursor to start of line.
