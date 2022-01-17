@@ -25,7 +25,8 @@ Goals:
 
 Core Progress (3 questions from each chapter):
 - Remember that chapters 1-8 have been done to completion.
-31 / 51 (60.7)
+- 31 / 51 (60.7)
+- 34 / 51 (66.6)
 
 ## Nice VSCode shortcuts.
 - `home`: cursor to start of line.

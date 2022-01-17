@@ -12,8 +12,7 @@ Like if you hear the question begin with:
 - Half and half approach: Divide the dataset in half.
 
 ## Recursive vs Iteraitve.
-- Recursive algorithms can be very space inefficient because each call adds a
-call to the stack. meaning if the dataset is large it could be better to use iteration instead.
+- Recursive algorithms can be very space inefficient because each call adds a call to the stack. meaning if the dataset is large it could be better to use iteration instead.
 
 ## Dynamic programming and Memoization.
 - Dynamic programming is taking a recursive problem and finding the overlapping sub-problems. you cache these results for later recursive calls.
