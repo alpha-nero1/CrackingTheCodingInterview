@@ -1,4 +1,4 @@
-namespace C_ {
+namespace Core {
   class Tree {
     private BinaryNode root;
     public Tree() {}

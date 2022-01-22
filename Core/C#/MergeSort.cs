@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System;
 using System.Text.Json;
 
-namespace C_
+namespace Core
 {
     public class MergeSort
     {

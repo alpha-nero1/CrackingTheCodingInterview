@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace C_ {
+namespace Core {
   class BinaryNode {
     public int value;
     public BinaryNode left;

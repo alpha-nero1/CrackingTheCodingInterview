@@ -21,10 +21,13 @@ Questions will mainly be done in JavaScript, Python and C# as they are awesome l
 - Remember that chapters 1-8 have been done to completion.
 - 31 / 51 (60.7)
 - 34 / 51 (66.6)
+- 42 / 51 (78.8)
+- 48 / 51 (94.1)
 
 ## Total Progress.
 first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 - 62 + 11 = 73 / 189 (38.6)
+- 62 + 48 - 21 = 89 / 189 (47.0)
 
 ## Nice VSCode shortcuts.
 - `home`: cursor to start of line.

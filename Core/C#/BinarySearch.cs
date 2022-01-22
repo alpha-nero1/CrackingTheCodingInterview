@@ -1,4 +1,4 @@
-namespace C_
+namespace Core
 {
     public class BinarySearch
     {
@@ -10,7 +10,7 @@ namespace C_
             if (right > left)
             {
                 // We know we are searching normally.
-                int middle = left + (r - 1) / 2;
+                int middle = left + (right - 1) / 2;
                 // If middle IS x then just return that.
                 if (arr[middle] == x) return middle;
 

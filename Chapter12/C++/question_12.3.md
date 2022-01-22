@@ -1,0 +1,3 @@
+A hashtable is implemented by using an array of linked lists and a hashing function (see the core folder for implementations). Inserts or lookups can be done at O(1) time because the key maps to a linked lists location in the array (its only O(1) if no collisions)
+
+A binary tree however stores it's key value pairs in a balanced tree to which the runtime would be O(log n) but for small num of entries it is fine.

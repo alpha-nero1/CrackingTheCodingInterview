@@ -1,6 +1,6 @@
 using System;
 
-namespace C_
+namespace Core
 {
     public class InsertionSort
     {

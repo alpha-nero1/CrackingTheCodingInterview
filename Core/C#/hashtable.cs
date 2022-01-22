@@ -1,7 +1,7 @@
 using System.Text;
 using System.Collections.Generic;
 
-namespace C_ {
+namespace Core {
 
   class Utils {
     // Our hash function...

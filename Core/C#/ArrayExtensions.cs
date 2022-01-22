@@ -1,5 +1,6 @@
 using System;
-namespace C_
+
+namespace Core
 {
     public static class ArrayExtensions
     {

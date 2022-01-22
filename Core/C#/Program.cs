@@ -2,7 +2,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace C_
+namespace Core
 {
     class Program
     {
@@ -33,6 +33,13 @@ namespace C_
                 new Func<int, int, bool>((int a, int b) => b < a)
             );
             Console.WriteLine($"Merge sorted: {JsonSerializer.Serialize(nextArr)}");
+            Console.WriteLine("Trying a circular array of 4 positions");
+            var circArr = new int[] { 0, 0, 0, 0 };
+            for (int i = 0; i < 100; i++)
+            {
+                circArr.Append(i, i);
+            }
+            Console.WriteLine($"End result: {JsonSerializer.Serialize(circArr)}");
         }
     }
 }
