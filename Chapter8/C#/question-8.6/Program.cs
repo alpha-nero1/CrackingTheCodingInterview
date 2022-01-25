@@ -41,10 +41,10 @@ namespace question_8._6
 
         public void MoveDisks(int n, Tower dest, Tower buffer)
         {
-            if (n <= 0) return;
-            MoveDisks(n - 1, buffer, dest);
-            MoveTopTo(dest);
-            buffer.MoveDisks(n - 1, dest, this);
+            if (n <= 0) return; // We are moving no disks, so return.
+            MoveDisks(n - 1, buffer, dest); // But all disks but the last one on the buffer.
+            MoveTopTo(dest); // Move the biggest one to the destination.
+            buffer.MoveDisks(n - 1, dest, this); // Move all disks from the buffer to the destination.
         }
 
         public void Add(int d)
@@ -52,6 +52,7 @@ namespace question_8._6
             if (_disks.Count > 0 && _disks.Peek() <= d) {
                 Console.WriteLine("Err placing disk {0}", d);
             } else {
+                // The disk we are placing is of a lower value than the current highest one...
                 _disks.Push(d);
             }
         }

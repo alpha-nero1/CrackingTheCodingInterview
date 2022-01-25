@@ -18,7 +18,6 @@ namespace Core
             return res;
         }
 
-        // Get back an exact copy of an array.
         public static T[] DirectCopy<T>(this T[] arr)
         {
             T[] res = new T[arr.Length];

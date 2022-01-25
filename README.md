@@ -27,6 +27,7 @@ first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 - 62 + 48 - 21 = 89 / 189 (47.0)
 - 62 + 51 - 21 = 92 / 189 (48.6)
 - 94 / 189 (49.7) (includes 8.4 and 8.5)
+- 98 / 189 (51.8) (invludes 8.9)
 
 ## Nice VSCode shortcuts.
 - `home`: cursor to start of line.
@@ -36,3 +37,9 @@ first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 
 ## Weird questions
 - 8.4
+
+## Very interesting and not fully understood
+- 8.7
+
+## Just mindblowing/awesome
+- 8.10 (tryed to do something similar before but never succeeded.)

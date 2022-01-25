@@ -1,4 +1,4 @@
-const { fill2DArray } = require('../../../Core/JavaScript/array-utils');
+const { fill2DArray } = require('../../Core/JavaScript/array-utils');
 
 const blockedPieces = fill2DArray(8, 8, 0);
 

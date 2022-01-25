@@ -2,7 +2,6 @@
 # we negate the possibility of any duplicate calculations that may happen
 # in any branching off.
 
-
 # Total steps and the memoization hashtable (or in this case array).
 def calculate_steps(total, mem_array):
     if (total < 0): return 0
