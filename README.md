@@ -30,6 +30,7 @@ first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 - 98 / 189 (51.8) (invludes 8.9)
 - 99 / 189 (52.3) (includes 8.10)
 - 100 / 189 (52.9) (includes 8.11)
+- 101 / 189 (53.4) (includes 8.12)
 
 ## Nice VSCode shortcuts.
 - `home`: cursor to start of line.
@@ -46,3 +47,4 @@ first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 
 ## Just mindblowing/awesome
 - 8.10 (tryed to do something similar before but never succeeded.)
+- 8.12 (place queens on chessboard, thought it was impossible, but so simple.)
