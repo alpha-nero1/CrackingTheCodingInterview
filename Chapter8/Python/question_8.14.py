@@ -1,6 +1,6 @@
 str_to_bool = lambda st : True if st == '1' else False
 
-
+# Look I wish I knew what was going on here but I don't and I am just moving on..
 def count_eval(expr, bool_res):
     parenthesised = ''
     if (len(expr) == 0): return 0
@@ -15,6 +15,18 @@ def count_eval(expr, bool_res):
 
         left_true = count_eval(left, True)
         left_false = count_eval(left, False)
+        right_true = count_eval(right, True)
+        right_false = count_eval(right, False)
+
+        total = (left_true + left_false) * (right_true + right_false)
+        total_true = 0
+
+        if (char == '^'): total_true = left_true * right_false + left_false * right_true
+        elif (char == '&'): total_true = left_true * right_true
+        elif (char == '|'): total_true = left_true * right_true + left_false * right_true + left_true * right_false
+
+        sub_ways = total_true if bool_res else total - total_true
+        ways += sub_ways
         i += 2
 
     return parenthesised

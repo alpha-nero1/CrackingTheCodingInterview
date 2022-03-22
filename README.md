@@ -31,6 +31,17 @@ first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 - 99 / 189 (52.3) (includes 8.10)
 - 100 / 189 (52.9) (includes 8.11)
 - 101 / 189 (53.4) (includes 8.12)
+- 108 / 189 (57.1) (includes 9.8)
+
+10. Sorting and Searching
+11. Testing
+12. C and C++
+13. Java
+
+14. Databases
+15. Threads and locks
+16. Moderate
+17. Hard
 
 ## Nice VSCode shortcuts.
 - `home`: cursor to start of line.
@@ -40,6 +51,7 @@ first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 
 ## Weird questions
 - 8.4
+- 8.14
 
 ## Very interesting and not fully understood
 - 8.7
