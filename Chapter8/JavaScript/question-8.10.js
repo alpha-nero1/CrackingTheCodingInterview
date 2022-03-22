@@ -15,6 +15,7 @@ function paint(screen, row, col, oldColour, newColour) {
     if (row < 0 || row >= screen.length) return false;
     if (col < 0 || col >= screen[0].length) return false;
 
+
     if (screen[row][col] !== oldColour) return true;
     screen[row][col] = newColour;
     paint(screen, row + 1, col, oldColour, newColour);
@@ -29,11 +30,13 @@ function paintFill(screen, row, col, newColour) {
     return screen;
 }
 
+
 const inputScreen = [
     [Colours.Red, Colours.Red, Colours.Red, Colours.Red],
     [Colours.Green, Colours.Red, Colours.Red, Colours.Red],
     [Colours.Green, Colours.Green, Colours.Red, Colours.Red],
     [Colours.Green, Colours.Green, Colours.Green, Colours.Red],
 ];
+
 
 console.log('painted screen = ', paintFill(inputScreen, 3, 0, Colours.Blue));
