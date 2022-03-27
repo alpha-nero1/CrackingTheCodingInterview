@@ -1,9 +1,7 @@
 # ⌨️ Cracking The Coding Interview.
-https://github.com/alpha-nero1/CrackingTheCodingInterview
-&nbsp;
-In this folder I will complete all 189 of cracking the coding interviews algorithms. My main language for doing so is JavaScript. For bonus points I will include the same solutions in different languages.
+In this folder I will complete all 189 of the cracking the coding interview's algorithms.
 
-Questions will be answered in:
+### Questions will be answered in:
 - Python
 - JavaScript
 - C#
