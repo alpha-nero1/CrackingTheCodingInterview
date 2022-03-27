@@ -1,5 +1,7 @@
 # ⌨️ Cracking The Coding Interview.
-In this folder I will complete all 189 of the cracking the coding interview's algorithms.
+In this project I will complete all 189 of the cracking the coding interview's algorithms.
+I also include a handy `Core` folder with great common/useful/awesome programming implementations
+like hashtables, linked lists, core sorting/searching algos and much more.
 
 ### Questions will be answered in:
 - Python
