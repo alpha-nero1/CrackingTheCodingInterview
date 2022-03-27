@@ -41,9 +41,9 @@ first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 - 101 / 189 (53.4) (includes 8.12)
 - 108 / 189 (57.1) (includes 9.8)
 - 112 / 189 (59.2) (includes 10.6 + 11.4)
-- 116 / 189 (61.3) (includes 10.10)
+- 117 / 189 (61.9) (includes 10.11)
 
-10. Sorting and Searching []
+10. Sorting and Searching [X]
 11. Testing []
 12. C and C++ []
 13. Java []
@@ -68,7 +68,11 @@ first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 - 8.11
 
 ## Just mindblowing/awesome
+### Chapter 8
 - 8.10 (tryed to do something similar before but never succeeded)
 - 8.12 (place queens on chessboard, thought it was impossible, but so simple)
+
+### Chapter 10
 - 10.8 (Find duplicate numbers using a byte[] bitmap)
 - 10.10 (Easily track the ranking of a stream of numbers)
+- 10.11 (Really cool easy way of sorting an array into peaks and valleys)
