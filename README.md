@@ -17,6 +17,7 @@ Questions will mainly be done in JavaScript, Python and C# as they are awesome l
 - Everything is figureoutable, take your time, understand the question and if you need help, reference the answers, it's a learning process anyway.
 - Do just a bit each day, there are too many questions here to worry about in large chunks.
 - It's a long road, just remember, it is a process.
+- The chapter introductions have really good information on the topics before you go into them, it is essential to have some notes on these and understand key concepts before running head first into the problems.
 
 ## ✅ Core Progress (3 questions from each chapter)
 Because it is a large book, the goals of completion have been split into 2.
@@ -42,9 +43,10 @@ first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 - 108 / 189 (57.1) (includes 9.8)
 - 112 / 189 (59.2) (includes 10.6 + 11.4)
 - 117 / 189 (61.9) (includes 10.11)
+- 121 / 189 (64.0) (includes 12.5)
 
 10. Sorting and Searching [X]
-11. Testing []
+11. Testing [X]
 12. C and C++ []
 13. Java []
 
@@ -76,3 +78,6 @@ first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 - 10.8 (Find duplicate numbers using a byte[] bitmap)
 - 10.10 (Easily track the ranking of a stream of numbers)
 - 10.11 (Really cool easy way of sorting an array into peaks and valleys)
+
+### Chapter 11
+- 10.5 (How would you test a pen?)
