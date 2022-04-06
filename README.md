@@ -44,10 +44,12 @@ first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 - 112 / 189 (59.2) (includes 10.6 + 11.4)
 - 117 / 189 (61.9) (includes 10.11)
 - 121 / 189 (64.0) (includes 12.5)
+- 123 / 189 (65.0) (includes 12.7)
+- 129 / 189 (68.2) (includes 13.5)
 
 10. Sorting and Searching [X]
 11. Testing [X]
-12. C and C++ []
+12. C and C++ [X]
 13. Java []
 
 14. Databases []

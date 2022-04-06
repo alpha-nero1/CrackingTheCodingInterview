@@ -100,3 +100,38 @@ class Person {
         }
 }
 ```
+
+## Pointers and References
+### Pointer
+A pointer holds the address of a variable and can be used to perform an operation that could be done on the variable such as accessing it and modifying it.
+
+Two pointers can equal eachother, such that changing ones value changes the other because they point to the same address.
+
+```
+int * p = new int;
+*p = 7;
+int * q = p;
+*p = 8
+cout << *q; // Prints 8
+```
+
+### References
+A reference is another name for an alias to a pre-existing object. It does not have memory of its own:
+
+```
+int a = 5;
+int & b = a;
+b = 7;
+cout << a; // prints 7
+```
+
+** Unlike pointers, references cannot be null and cannot be reassigned to another piece of memory **
+
+## Templates
+Similar to generics
+
+```
+template <class T>class ShiftedList {
+    ...
+}
+```
