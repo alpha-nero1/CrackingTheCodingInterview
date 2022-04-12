@@ -46,14 +46,17 @@ first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 - 121 / 189 (64.0) (includes 12.5)
 - 123 / 189 (65.0) (includes 12.7)
 - 129 / 189 (68.2) (includes 13.5)
+- 136 / 189 (71.9) (includes 15.3)
+- 141 / 189 (74.6) (includes 16.4)
+- 144 / 189 (76.1) (includes 16.7)
 
 10. Sorting and Searching [X]
 11. Testing [X]
 12. C and C++ [X]
-13. Java []
+13. Java [X]
 
-14. Databases []
-15. Threads and locks []
+14. Databases [X]
+15. Threads and locks [X]
 16. Moderate []
 17. Hard []
 
@@ -73,13 +76,30 @@ first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 
 ## Just mindblowing/awesome
 ### Chapter 8
-- 8.10 (tryed to do something similar before but never succeeded)
-- 8.12 (place queens on chessboard, thought it was impossible, but so simple)
+- 8.10 tryed to do something similar before but never succeeded.
+- 8.12 place queens on chessboard, thought it was impossible, but so simple.
 
 ### Chapter 10
-- 10.8 (Find duplicate numbers using a byte[] bitmap)
-- 10.10 (Easily track the ranking of a stream of numbers)
-- 10.11 (Really cool easy way of sorting an array into peaks and valleys)
+- 10.8 Find duplicate numbers using a byte[] bitmap.
+- 10.10 Easily track the ranking of a stream of numbers.
+- 10.11 Really cool easy way of sorting an array into peaks and valleys.
 
 ### Chapter 11
-- 10.5 (How would you test a pen?)
+- 10.5 How would you test a pen?
+
+### Chapter 13
+- 13.7 Lamdas in Java use `->`
+
+### Chapter 14
+- 14.1 Simple and effective use of the `HAVING` keyword.
+- 14.7 Exellent use of a subquery.
+
+### Chapter 15
+- 15.3 The chopsticks dilema!
+- 15.7 Subclassing `Thread`!
+
+### Chapter 16
+- 16.1 Swap ints without a temp variable.
+- 16.4 Brilliant way of traversing a matrix diagonally.
+- 16.6 Great example of using a and b cursors to iterate through two arrays to get smallest pairs.
+- 16.7 Crazy way to find the max number without any if else.
