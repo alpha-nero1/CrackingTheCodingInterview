@@ -49,6 +49,7 @@ first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 - 136 / 189 (71.9) (includes 15.3)
 - 141 / 189 (74.6) (includes 16.4)
 - 144 / 189 (76.1) (includes 16.7)
+- 149 / 189 (78.8) (includes 16.12)
 
 10. Sorting and Searching [X]
 11. Testing [X]
@@ -103,3 +104,4 @@ first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 - 16.4 Brilliant way of traversing a matrix diagonally.
 - 16.6 Great example of using a and b cursors to iterate through two arrays to get smallest pairs.
 - 16.7 Crazy way to find the max number without any if else.
+- 16.8 Convert an integer to the english spelling.
