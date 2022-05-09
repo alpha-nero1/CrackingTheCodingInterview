@@ -50,6 +50,8 @@ first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 - 141 / 189 (74.6) (includes 16.4)
 - 144 / 189 (76.1) (includes 16.7)
 - 149 / 189 (78.8) (includes 16.12)
+- 153 / 189 (80.9) (includes 16.16)
+- 154 / 189 (81.4) (includes 16.17)
 
 10. Sorting and Searching [X]
 11. Testing [X]
@@ -105,3 +107,4 @@ first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 - 16.6 Great example of using a and b cursors to iterate through two arrays to get smallest pairs.
 - 16.7 Crazy way to find the max number without any if else.
 - 16.8 Convert an integer to the english spelling.
+- 16.15 real show of prowess with JS closures.
