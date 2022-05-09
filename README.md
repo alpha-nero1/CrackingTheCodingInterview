@@ -31,6 +31,9 @@ is to finish off the rest.
 - 51 / 51 (100) !!!
 
 ## ✅ Total Progress
+## 81.4 %
+[xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-------------------]
+
 first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 - 62 + 11 = 73 / 189 (38.6)
 - 62 + 48 - 21 = 89 / 189 (47.0)
