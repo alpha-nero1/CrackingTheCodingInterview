@@ -31,8 +31,8 @@ is to finish off the rest.
 - 51 / 51 (100) !!!
 
 ## ✅ Total Progress
-## 81.4 %
-[xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-------------------]
+## 82.5 %
+[xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx------------------]
 
 first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 - 62 + 11 = 73 / 189 (38.6)
@@ -55,6 +55,7 @@ first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 - 149 / 189 (78.8) (includes 16.12)
 - 153 / 189 (80.9) (includes 16.16)
 - 154 / 189 (81.4) (includes 16.17)
+- 156 / 189 (82.5) (includes 16.19)
 
 10. Sorting and Searching [X]
 11. Testing [X]
@@ -75,6 +76,7 @@ first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 ## Weird questions
 - 8.4
 - 8.14
+- 16.18 - question does not make sense.
 
 ## Very interesting and not fully understood
 - 8.7
@@ -111,3 +113,4 @@ first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 - 16.7 Crazy way to find the max number without any if else.
 - 16.8 Convert an integer to the english spelling.
 - 16.15 real show of prowess with JS closures.
+- 16.19 pond counter! knocked it out of the park!
