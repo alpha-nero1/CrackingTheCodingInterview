@@ -31,8 +31,8 @@ is to finish off the rest.
 - 51 / 51 (100) !!!
 
 ## ✅ Total Progress
-## 82.5 %
-[xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx------------------]
+## 87.8 %
+[xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-----------]
 
 first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 - 62 + 11 = 73 / 189 (38.6)
@@ -57,6 +57,7 @@ first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 - 154 / 189 (81.4) (includes 16.17)
 - 156 / 189 (82.5) (includes 16.19)
 - 157 / 189 (83.0) (includes 16.20)
+- 166 / 189 (87.8) (includes 16.26)
 
 10. Sorting and Searching [X]
 11. Testing [X]
@@ -65,7 +66,7 @@ first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 
 14. Databases [X]
 15. Threads and locks [X]
-16. Moderate []
+16. Moderate [X]
 17. Hard []
 
 ## Nice VSCode shortcuts.
@@ -116,3 +117,4 @@ first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 - 16.15 real show of prowess with JS closures.
 - 16.19 pond counter! knocked it out of the park!
 - 16.24 great way of finding pairs in an array that make a sum!
+- 16.26 Awesome calculator implementation, has a bug with multiple of the same op but is still awesome!

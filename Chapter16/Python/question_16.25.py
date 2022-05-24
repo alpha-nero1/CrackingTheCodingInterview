@@ -1,25 +1,35 @@
+"""
+    16.25. LRU Cache.
+"""
+
 class LruCache():
-    used_counts = {}
     cache = {}
+    use_records = []
 
     def __init__(self, max_size = 3):
         self.max_size = max_size
         self.lowest_used_count = self.max_size;
 
     def get(self, key):
-        self.used_counts[key] = (self.used_counts.get(key) or 0) + 1
-        if (self.used_counts.get(key) < self.lowest_used_count):
-            self.lowest_used_count = self.used_counts.get(key)
+        if (key != self.get_next_unused_key()): self.use_records.insert(0, key)
         return self.cache.get(key)
 
+    def get_next_unused_key(self):
+        if (len(self.use_records) > 0):
+            return self.use_records[0]
+        return None
+
     def set(self, key, value):
-        self.used_counts[key] = 0
-        if (len(self.cache) > self.max_size):
+        if (len(self.cache) >= self.max_size):
             # Kick out the least used element.
-            lowest_used_item = self.used_counts.get(self.lowest_used_count)
-            if (lowest_used_item != None):
-                self.cache.pop(lowest_used_item)
-                self.used_counts.pop(lowest_used_item)
+            if (
+                self.get_next_unused_key() != None
+                and self.cache.get(self.get_next_unused_key()) != None
+            ):
+                self.cache.pop(self.get_next_unused_key())
+                self.use_records.pop(0)
+            else:
+                self.cache.pop(list(self.cache.keys())[0])
 
         self.cache[key] = value
 
@@ -36,10 +46,22 @@ cache.set('hello2', 'thisurl')
 cache.set('hello3', 'thisurl')
 cache.set('hello4', 'thisurl')
 
+cache.print()
+
 cache.get('hello')
+cache.get('hello1')
+cache.get('hello1')
+cache.get('hello1')
 cache.get('hello1')
 cache.get('hello2')
 cache.get('hello3')
 cache.get('hello4')
 
+cache.set('hello5', 'thisurl')
+cache.set('hello6', 'thisurl')
+cache.set('hello7', 'thisurl')
+
+cache.set('hello8', 'thisurl')
+cache.set('hello9', 'thisurl')
+cache.set('hello11', 'thisurl')
 cache.print()
