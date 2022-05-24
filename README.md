@@ -114,3 +114,4 @@ first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 - 16.8 Convert an integer to the english spelling.
 - 16.15 real show of prowess with JS closures.
 - 16.19 pond counter! knocked it out of the park!
+- 16.24 great way of finding pairs in an array that make a sum!
