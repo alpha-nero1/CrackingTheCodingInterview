@@ -31,8 +31,8 @@ is to finish off the rest.
 - 51 / 51 (100) !!!
 
 ## ✅ Total Progress
-## 87.8 %
-[xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-----------]
+## 89.9 %
+[xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx----------]
 
 first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 - 62 + 11 = 73 / 189 (38.6)
@@ -59,6 +59,7 @@ first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 - 157 / 189 (83.0) (includes 16.20)
 - 166 / 189 (87.8) (includes 16.26)
 - 167 / 189 (88.3) (includes 17.4)
+- 170 / 189 (89.9) (includes 17.7)
 
 10. Sorting and Searching [X]
 11. Testing [X]
@@ -119,3 +120,7 @@ first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 - 16.19 pond counter! knocked it out of the park!
 - 16.24 great way of finding pairs in an array that make a sum!
 - 16.26 Awesome calculator implementation! This is easily one of my most prized algorithms.
+
+###
+All of 17 is extremely hard. I have given these my best shot but will need to go back
+and fine-tune/bug-fix.
