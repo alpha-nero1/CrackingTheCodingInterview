@@ -1,9 +1,3 @@
-/*
-    17.7. True name frequencies.
-*/
-
-
-// Start From Core.
 class GraphNode {
     // Graph node must be conbstructed with a key and a value.
     constructor(key, value) {
@@ -79,65 +73,3 @@ class Graph {
         return `${str}]`
     }
 }
-
-// End from Core.
-
-const findTrueNameFreqs = (nameFreqsArr, synonymsArr) => {
-    const constructGraph = (names) => {
-        const graph = new Graph();
-        names.forEach((value) => {
-            graph.createNode(value[0], value[1]);
-        });
-        return graph;
-    }
-    
-    const connectNodeEdges = (graph, synonymsArr) => {
-        synonymsArr.forEach((synPair) => {
-            graph.addEdge(synPair[0], synPair[1]);
-        });
-    }
-    
-    const countFrequencies = (node) => {
-        if (node.getVisited()) return 0; // Already counted!
-        node.setVisited(true);
-        let sum = node.value;
-        node.getEdges().forEach((edgeNode) => {
-            sum += countFrequencies(edgeNode);
-        });
-        return sum;
-    };
-    
-    const trueCounts = new Map();
-    const graph = constructGraph(nameFreqsArr);
-    connectNodeEdges(graph, synonymsArr);
-    graph.forEach((node) => {
-        if (node.getVisited()) return;
-        trueCounts.set(node.key, countFrequencies(node));
-    });
-    return trueCounts;
-}
-
-console.log(findTrueNameFreqs(
-    [
-        ['Jonny', 10],
-        ['Jon', 3],
-        ['Davis', 2],
-        ['Kari', 3],
-        ['Johnny', 11],
-        ['John', 1],
-        ['Carlton', 8],
-        ['Carleton', 2],
-        ['Jonathan', 9],
-        ['Cartrie', 5],
-        ['Carrrie', 1],
-    ],
-    [
-        ['Jonathan', 'John'],
-        ['Jon', 'Jonny'],
-        ['Jonny', 'Johnny'],
-        ['John', 'Johnny'],
-        ['Johnny', 'Jonny'],
-        ['Kari', 'Carrie'],
-        ['Carleton', 'Carlton'],
-    ]
-));
