@@ -1,4 +1,7 @@
-# C#
+# Core / C#
+The core C# folder contains core code implementations that further the understanding of C# and programming in general.
+
+Ale, early 2021 -
 
 C# is a little different to all the rest, one thing I can note is that it seems to be a very Microsoft (Windows) programming language. To create a small dotnet project, exec `dotnet new console` in the desired folder. To then compile and run the code you must execute `dotnet run` inside the folder. C# and the .NET framework form a symbiance.
 

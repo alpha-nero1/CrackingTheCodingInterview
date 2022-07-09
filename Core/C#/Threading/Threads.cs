@@ -4,9 +4,22 @@
 using System;
 using System.Threading;
 
-namespace Core
+namespace Core.Threading
 {
-    public class ExThread {
+    public class Threading {
+    
+        // Main me  thod
+        public static void Main()
+        {
+            // Creating and initializing threads
+            Thread a = new Thread(ThreadExecutors.thread1);
+            Thread b = new Thread(ThreadExecutors.thread2);
+            a.Start();
+            b.Start();
+        }
+    }
+
+    static class ThreadExecutors {
     
         // Static method for thread a
         public static void thread1()
@@ -24,17 +37,4 @@ namespace Core
             }
         }
     }
-    
-    // public class GFG {
-    
-    //     // Main method
-    //     public static void Main()
-    //     {
-    //         // Creating and initializing threads
-    //         Thread a = new Thread(ExThread.thread1);
-    //         Thread b = new Thread(ExThread.thread2);
-    //         a.Start();
-    //         b.Start();
-    //     }
-    // }
 }

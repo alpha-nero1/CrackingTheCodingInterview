@@ -1,6 +1,6 @@
 using System;
 
-namespace Core
+namespace Core.Sorting
 {
     public class InsertionSort
     {

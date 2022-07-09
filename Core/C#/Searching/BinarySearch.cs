@@ -1,4 +1,4 @@
-namespace Core
+namespace Core.Searching
 {
     public class BinarySearch
     {

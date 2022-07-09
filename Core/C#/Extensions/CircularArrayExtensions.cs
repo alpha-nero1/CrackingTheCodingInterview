@@ -1,6 +1,6 @@
 using System;
 
-namespace Core
+namespace Core.Extensions
 {
     public static class CircularArrayExtensions
     {
