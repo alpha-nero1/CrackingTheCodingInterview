@@ -33,6 +33,25 @@ namespace Core.DataStructures {
 			set { Set(key, value); }
 		}
 
+        public T Get(string key) {
+			if (key != null) {
+				int hashIndex = Hash(key, _entries.Length);
+				LinkedList<ChainNode<T>> chain = _entries[hashIndex];
+				foreach (ChainNode<T> node in chain) {
+					if (node.Key == key) return node.Value;
+				}
+			}
+			return default;
+		}
+
+        public IEnumerable<T> Values() => Items().Select(x => x.Value);
+
+		public IEnumerable<string> Keys() => Items().Select(x => x.Key);
+
+        public bool Has(string key) {
+			return !EqualityComparer<T>.Default.Equals(Get(key), default(T));
+		}
+
 		public void Set(string key, T value) {
 			if (String.IsNullOrWhiteSpace(key)) return;
 
@@ -65,21 +84,6 @@ namespace Core.DataStructures {
 			chain.AddLast(newNode);
 		}
 
-		public T Get(string key) {
-			if (key != null) {
-				int hashIndex = Hash(key, _entries.Length);
-				LinkedList<ChainNode<T>> chain = _entries[hashIndex];
-				foreach (ChainNode<T> node in chain) {
-					if (node.Key == key) return node.Value;
-				}
-			}
-			return default;
-		}
-
-		public bool Has(string key) {
-			return !EqualityComparer<T>.Default.Equals(Get(key), default(T));
-		}
-
 		public void Remove(string key) {
 			if (String.IsNullOrWhiteSpace(key)) return;
 
@@ -90,13 +94,6 @@ namespace Core.DataStructures {
 			ChainNode<T> nodeToRemove = FindNodeByKey(key, chain);
 			if (nodeToRemove != null) chain.Remove(nodeToRemove);
 		}
-
-		public IEnumerable<T> Values()
-		{
-			return Items().Select(x => x.Value);
-		}
-
-		public IEnumerable<string> Keys() => Items().Select(x => x.Key);
 
 		public void Clear()
 		{
