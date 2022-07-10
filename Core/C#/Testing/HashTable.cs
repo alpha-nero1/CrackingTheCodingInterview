@@ -2,7 +2,7 @@ using System;
 using Xunit;
 using Core.DataStructures;
 
-namespace Testing
+namespace Core.Testing
 {
     public class HashTable
     {
