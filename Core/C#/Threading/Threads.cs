@@ -8,8 +8,7 @@ namespace Core.Threading
 {
     public class Threading {
     
-        // Main me  thod
-        public static void Main()
+        public static void Test()
         {
             // Creating and initializing threads
             Thread a = new Thread(ThreadExecutors.thread1);

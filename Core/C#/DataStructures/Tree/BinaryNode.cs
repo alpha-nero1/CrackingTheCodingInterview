@@ -14,8 +14,9 @@ namespace Core.DataStructures {
 
 		public BinaryNode Right => _right;
 		public BinaryNode Left => _left;
-		public BinaryNode Size => _size;
-		public BinaryNode Value => _value;
+		public int Size => _size;
+		public int Value => _value;
+		public BinaryNode Parent => _parent;
 		
 		
 		public BinaryNode(int value) {
@@ -37,16 +38,20 @@ namespace Core.DataStructures {
 			_right.SetParent(this);
 		}
 
+		public void SetSize(int size) {
+			_size = size;
+		}
+
 		public BinaryNode GetRandomNode() {
-			int leftSize = _left == null ? 0 : left.Size;
+			int leftSize = _left == null ? 0 : _left.Size;
 			System.Console.WriteLine($"leftSize: {leftSize}");
 			System.Random random = new System.Random();
 			int index = random.Next(_size);
 			System.Console.WriteLine($"index: {index}");
 			
-			if (index < leftSize) return _left.getRandomNode();
+			if (index < leftSize) return _left.GetRandomNode();
 			else if (index == leftSize) return this;
-			return _right.getRandomNode();
+			return _right.GetRandomNode();
 		}
 
 		public void Insert(int value) {
@@ -68,8 +73,8 @@ namespace Core.DataStructures {
 
 		public BinaryNode Find(int value) {
 			if (value == _value) return this;
-			if (value <= _value) return left != null ? left.Find(value) : null;
-			if (value > _value) return right != null ? right.Find(value) : null;
+			if (value <= _value) return _left != null ? _left.Find(value) : null;
+			if (value > _value) return _right != null ? _right.Find(value) : null;
 			return null;
 		}
 
@@ -78,12 +83,12 @@ namespace Core.DataStructures {
 			if (nodeToDelete == null) return false;
 			if (nodeToDelete.Parent == null) return false;
 			
-			nodeToDelete.Parent.Size -= nodeToDelete.Size;
+			nodeToDelete.Parent.SetSize(nodeToDelete.Parent.Size - nodeToDelete.Size);
 			if (nodeToDelete.Parent.Value >= value) {
 				// delete parents left
-				nodeToDelete.Parent.Left = null;
+				nodeToDelete.Parent.SetLeft(null);
 			} else if (nodeToDelete.Parent.Value < value) {
-				nodeToDelete.Parent.Right = null;
+				nodeToDelete.Parent.SetRight(null);
 			}
 			return true;
 		}
