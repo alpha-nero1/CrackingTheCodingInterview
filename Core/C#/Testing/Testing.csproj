@@ -3,11 +3,9 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <IsPackable>false</IsPackable>
-    <GenerateProgramFile>false</GenerateProgramFile>
-    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="../C#.csproj" />
+    <ProjectReference Include="../Core/Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>

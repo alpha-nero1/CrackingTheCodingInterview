@@ -37,7 +37,7 @@ namespace Core.DataStructures {
 			if (String.IsNullOrWhiteSpace(key)) return;
 
 			int hashIndex = Hash(key, _entries.Length);
-			
+
 			_insertionCount += 1;
 			var newNode = new ChainNode<T>(key, value, _insertionCount);
 			// Set the value in its chain.
@@ -121,9 +121,9 @@ namespace Core.DataStructures {
 							str = $"{str},\n";
 						}
 						if (valueType.Equals(typeof(int))) {
-							str = $"{str}  \"{chainItemKey}\" : {chainItemValue}";
+							str = $"{str}  \"{chainItemKey}\": {chainItemValue}";
 						} else {
-							str = $"{str}  \"{chainItemKey}\" : \"{chainItemValue}\"";
+							str = $"{str}  \"{chainItemKey}\": \"{chainItemValue}\"";
 						}
 						node = node.Next;
 						if (!hasPassedFirst) {

@@ -1,27 +1,33 @@
 # Core / C#
 The core C# folder contains core code implementations that further the understanding of C# and programming in general.
 
-## DataStructures
+<br/>
+
+## Core
+The csproject folder that contains implementations.
+### Core / DataStructures
 Explores different implementations of data structures in C#.
 
-## Extensions
+### Core / Extensions
 Explores different quality of life extension methods.
 
-## Searching
+### Core / Searching
 Explores how different searching algorithms can be implemented in C#.
 
-## Sorting
+### Core / Sorting
 Explores how different sorting anlgorithms can be implemented in C#.
 
-## Threading
+### Core / Threading
 Explores threading in C#.
 
-## Sys
+### Core / Sys
 Explores the C# System API.
 
 ## Testing
 Explores testing dotnet applications and verifies implementations in other folders.
 Sub-project created with `dotnet new xunit -o Testing`. To run tests, execute `dotnet test`.
+
+Tests the `Core` csproject.
 
 <br/>
 <br/>
@@ -33,7 +39,7 @@ C# is a little different to all the rest, one thing I can note is that it seems 
 Notes on C#
 - Very windows like/related.
 - Like Java it also makes use of classes containing `public static void Main(string[] args)` (Java string type is String)
-- The language uses `{<arg num>}` to concat variables into strings e.g. 
+- The language uses `{<arg num>}` to concat variables into strings e.g.
 `Console.WriteLine("Is unique \"abcdefg\": {0}", QuestionOne.IsUnique("abcdefg"));`
 - Also classes can be wrapped in a namespace e.g.
 ```
