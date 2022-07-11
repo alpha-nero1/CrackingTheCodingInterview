@@ -1,15 +1,15 @@
 using System;
 using Xunit;
 using Xunit.Abstractions;
-using Core.DataStructures;
+using Core.DataStructures.HashTable;
 using System.Linq;
 
 namespace Core.Testing
 {
-    public class HashTable
+    public class HashTableTests
     {
         private readonly ITestOutputHelper _output;
-        public HashTable(ITestOutputHelper output)
+        public HashTableTests(ITestOutputHelper output)
         {
             _output = output;
         }

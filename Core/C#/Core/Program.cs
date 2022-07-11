@@ -4,7 +4,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Core.Searching;
 using Core.Sorting;
-using Core.DataStructures;
+using Core.DataStructures.HashTable;
 using System.Linq;
 
 namespace Core

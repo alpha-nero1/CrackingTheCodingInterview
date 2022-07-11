@@ -3,7 +3,7 @@ using System.Text;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Core.DataStructures {
+namespace Core.DataStructures.HashTable {
 
 	public class HashTable<T> : IHashTable<T> {
 		private static int INITIAL_ARRAY_SIZE = 1000;
