@@ -46,10 +46,27 @@ namespace Core.Testing
         }
 
         [Fact]
+        public void Iterate_Ten()
+        {
+            IterationTest(10);
+        }
+
+        [Fact]
         public void Iterate_OneThousand()
         {
+            IterationTest(1000);
+        }
+
+        [Fact]
+        public void Iterate_TenThousand()
+        {
+            IterationTest(10000);
+        }
+
+        private void IterationTest(int iterations)
+        {
             var ll = new LinkedList<int>();
-            for (int i = 0; i < 1000; i++)
+            for (int i = 0; i < iterations; i++)
             {
                 ll.Add(i);
             }
@@ -58,10 +75,9 @@ namespace Core.Testing
 
             foreach (int i in ll)
             {
-                _output.WriteLine("Iterated {0}", i);
                 itCount += 1;
             }
-            Assert.True(itCount == 1000, "Linked list did not iterate correctly.");
+            Assert.True(itCount == ll.Count, "Linked list did not iterate correctly.");
         }
     }
 }

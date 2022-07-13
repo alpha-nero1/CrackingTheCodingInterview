@@ -7,7 +7,6 @@ namespace Core.DataStructures.LinkedList
     public class LinkedList<T> : ILinkedList<T>
     {
         private Node<T> _head;
-
         public int Count { get; private set; }
 
         public LinkedList() {}
@@ -138,24 +137,30 @@ namespace Core.DataStructures.LinkedList
     class LinkedListEnumerator<T> : IEnumerator<T>
     {
         private Node<T> _head;
-        int position = -1;
-        int _count = 0;
+        private Node<T> _current;
+        bool _readFirst = false;
         private bool disposedValue = false;
 
         public LinkedListEnumerator(Node<T> head)
         {
             _head = head;
+            _current = head;
         }
 
         public bool MoveNext()
         {
-            position++;
-            return position < _count;
+            if (!_readFirst)
+            {
+                _readFirst = true;
+                return true;
+            }
+            _current = _current.Next;
+            return _current != null;
         }
 
         public void Reset()
         {
-            position = -1;
+            _current = _head;
         }
 
         T IEnumerator<T>.Current
@@ -178,22 +183,7 @@ namespace Core.DataStructures.LinkedList
         {
             get
             {
-                try
-                {
-                    int i = 0;
-                    var current = _head;
-                    while (current != null)
-                    {
-                        if (position == i) return current.Value;
-                        i += 1;
-                        current = current.Next;
-                    }
-                    return default;
-                }
-                catch (Exception e)
-                {
-                    throw new InvalidOperationException();
-                }
+                return _current.Value;
             }
         }
 
