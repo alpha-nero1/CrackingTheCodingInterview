@@ -126,3 +126,4 @@ first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 This chapter was definitelty really hard and required reading through solutions properly in order
 to understand the concept before programming.
 - 17.7 Really excellent use of Graphs to find similar name frequencies!
+- 17.9 Very interesting algorithm, needs more time to comprehend.
