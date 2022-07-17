@@ -24,24 +24,25 @@ const getKthMagicNumber = (k: number): number => {
         console.log(`v3 ${v3}, v5 ${v5}, v7 ${v7}`);
 
         val = Math.min(v3, v5, v7);
-        // Enqueue into 3, 5, 7
+        // Take from 3, Enqueue into 3, 5, 7
         if (val === v3) {
             q3.pop();
             q3.push(val * 3);
             q5.push(val * 5);
         }
-        // Enqueue into 5 and 7
+        // Take from 5, Enqueue into 5 and 7
         else if (val === v5) {
             q5.pop();
             q5.push(5 * val);
         }
-        // Enqueue into 7
+        // Take from 7, Enqueue into 7
         else if (val === v7) {
             q7.pop()
         }
 
         // Always enqueue into q7
         q7.push(val * 7);
+
         console.log(`queue 3 = ${q3}`);
         console.log(`queue 5 = ${q5}`);
         console.log(`queue 7 = ${q7}`);
