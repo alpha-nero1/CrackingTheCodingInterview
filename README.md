@@ -31,9 +31,6 @@ is to finish off the rest.
 - 51 / 51 (100) !!!
 
 ## ✅ Total Progress
-## 89.9 %
-[xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx----------]
-
 first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 - 62 + 11 = 73 / 189 (38.6)
 - 62 + 48 - 21 = 89 / 189 (47.0)
@@ -62,6 +59,7 @@ first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 - 170 / 189 (89.9) (includes 17.7)
 - 171 / 189 (90.4) (includes 17.8)
 - 173 / 189 (91.5) (includes 17.10)
+- 174 / 189 (92.0) (includes 17.11)
 
 10. Sorting and Searching [X]
 11. Testing [X]
