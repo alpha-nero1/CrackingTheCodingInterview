@@ -9,6 +9,8 @@ public static class BinarySearch
 {
     public static int Search(int[] arr, int value)
     {
+        // We would need a slightly more sophisticated algorithm for negatives.
+        if (value < 0) return -1;
         return Search(arr, 0, arr.Length - 1, value);
     }
 
@@ -17,6 +19,9 @@ public static class BinarySearch
     // runtime = O(log n)
     private static int Search(int[] arr, int left, int right, int x)
     {
+        // Check the edges first.
+        if (arr[left] == x) return left;
+        if (arr[right] == x) return right;
         if (right > left)
         {
             // We know we are searching normally.

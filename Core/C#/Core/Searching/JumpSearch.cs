@@ -11,12 +11,36 @@
     Performed on sorted algorithms.
 */
 
+using System;
+
 namespace Core.Searching;
 
 public static class JumpSearch
 {
     public static int Search(int[] arr, int x)
     {
+        if (arr.Length == 0) return -1;
+        int step = (int) Math.Sqrt(arr.Length);
+
+        int stepEndIndex = 0;
+
+        for (int i = 0; i < arr.Length; i += step)
+        {
+            stepEndIndex = Math.Min((i + step) - 1, arr.Length - 1);
+            int val = arr[stepEndIndex];
+            if (x < val) break;
+        }
+
+        // We have found the correct chunk.
+        // Do a linear search on it.
+        // Correct for chunk overshooting into negative.
+        int stepStartIndex = (stepEndIndex - step);
+        if (stepStartIndex < 0) stepStartIndex = 0;
+        for (int j = stepStartIndex; j < (stepEndIndex + 1); j += 1)
+        {
+            if (arr[j] == x) return j;
+        }
+
         return -1;
     }
 }

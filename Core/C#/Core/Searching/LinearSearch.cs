@@ -21,6 +21,6 @@ public static class LinearSearch
         {
             if (comparer.Equals(arr[i], element)) return i;
         }
-        return default;
+        return -1;
     }
 }
