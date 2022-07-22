@@ -153,8 +153,29 @@ namespace Testing
         public void ExponentialSearchLocate(int value, int expectedIndex)
         {
             var res = ExponentialSearch.Search(_testingArray, value);
-            _output.WriteLine("Value = {0}, Result = {1}, Expected = {2}", value, res, expectedIndex);
             Assert.True(res == expectedIndex, "Incorrect index returned for exponential search.");
+        }
+
+        [Theory]
+        [InlineData(0, 0)]
+        [InlineData(1, 1)]
+        [InlineData(3, 3)]
+        [InlineData(5, 5)]
+        [InlineData(6, 6)]
+        [InlineData(8, 8)]
+        [InlineData(10, 10)]
+        [InlineData(11, 11)]
+        [InlineData(16, 16)]
+        [InlineData(18, 18)]
+        [InlineData(19, 19)]
+        [InlineData(32, 32)]
+        [InlineData(39, 39)]
+        [InlineData(41, -1)]
+        [InlineData(-2, -1)]
+        public void FibonnacciSearchLocate(int value, int expectedIndex)
+        {
+            var res = FibonacciSearch.Search(_testingArray, value);
+            Assert.True(res == expectedIndex, "Incorrect index returned for fibonacci search.");
         }
     }
 }
