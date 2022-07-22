@@ -8,7 +8,7 @@ namespace Core.Sys
 {
     public class ReadFileExample
     {
-        public async Task Execute()
+        public void Execute()
         {
             using var readFileContext = new ReadFile("file.txt");
         }
