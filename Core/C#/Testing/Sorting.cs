@@ -26,7 +26,7 @@ public class SortingTests
         {
             var prev = res[i - 1];
             var curr = res[i];
-            Assert.True(curr > prev, "Array is out of order");
+            Assert.True(curr >= prev, "Array is out of order");
         }
     }
 
@@ -39,7 +39,7 @@ public class SortingTests
         {
             var prev = res[i - 1];
             var curr = res[i];
-            Assert.True(curr < prev, "Array is out of order");
+            Assert.True(curr <= prev, "Array is out of order");
         }
     }
 
@@ -51,7 +51,7 @@ public class SortingTests
         {
             var prev = res[i - 1];
             var curr = res[i];
-            Assert.True(curr > prev, "Array is out of order");
+            Assert.True(curr >= prev, "Array is out of order");
         }
     }
 
@@ -64,7 +64,7 @@ public class SortingTests
         {
             var prev = res[i - 1];
             var curr = res[i];
-            Assert.True(curr < prev, "Array is out of order");
+            Assert.True(curr <= prev, "Array is out of order");
         }
     }
 
@@ -76,7 +76,7 @@ public class SortingTests
         {
             var prev = res[i - 1];
             var curr = res[i];
-            Assert.True(curr < prev, "Array is out of order");
+            Assert.True(curr <= prev, "Array is out of order");
         }
     }
 
@@ -88,7 +88,31 @@ public class SortingTests
         {
             var prev = res[i - 1];
             var curr = res[i];
-            Assert.True(curr > prev, "Array is out of order");
+            Assert.True(curr >= prev, "Array is out of order");
+        }
+    }
+
+    [Fact]
+    public void MergeSortAsc()
+    {
+        var res = MergeSort.Sort(_testingArr);
+        for (int i = 1; i < res.Length; i++)
+        {
+            var prev = res[i - 1];
+            var curr = res[i];
+            Assert.True(curr >= prev, "Array is out of order");
+        }
+    }
+
+    [Fact]
+    public void MergeSortDesc()
+    {
+        var res = MergeSort.Sort(_testingArr, false);
+        for (int i = 1; i < res.Length; i++)
+        {
+            var prev = res[i - 1];
+            var curr = res[i];
+            Assert.True(curr <= prev, "Array is out of order");
         }
     }
 }
