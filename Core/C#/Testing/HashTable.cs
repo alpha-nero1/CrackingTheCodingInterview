@@ -4,7 +4,7 @@ using Xunit.Abstractions;
 using Core.DataStructures.HashTable;
 using System.Linq;
 
-namespace Core.Testing;
+namespace Testing;
 
 public class HashTableTests
 {

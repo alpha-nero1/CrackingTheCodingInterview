@@ -3,7 +3,7 @@ using Core.DataStructures.LinkedList;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace Core.Testing;
+namespace Testing;
 
 public class LinkedListTests
 {
