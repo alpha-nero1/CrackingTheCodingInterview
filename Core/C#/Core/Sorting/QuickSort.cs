@@ -1,5 +1,5 @@
 /*
-    Quicksort works much like merge sort, however, 
+    Quicksort works much like merge sort, however,
 */
 
 using System;
@@ -34,27 +34,20 @@ public static class QuickSort
 
     private static int Partition<T>(T[] arr, int low, int high, Func<T, T, int> compFunc)
     {
-        // [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
-        // low = 0;
-        // high = 9;
-        // pivot = 0;
         var pivot = arr[high];
 
-        // i = -1;
         int i = low - 1;
 
-        // from -1 to 9
         for (int j = low; j < high; j++)
         {
-            // if the pivot is "greater" than the current element
-            if (compFunc(pivot, arr[j]) == -1)
+            var next = arr[j];
+            if (compFunc(pivot, next) == -1)
             {
                 i += 1;
                 arr.Swap(i, j);
             }
         }
 
-        // [0, 8, 7, 6, 5, 4, 3, 2, 1]
         arr.Swap(i + 1, high);
 
         return i + 1;
