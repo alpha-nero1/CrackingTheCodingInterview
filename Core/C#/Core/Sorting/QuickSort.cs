@@ -38,6 +38,8 @@ public static class QuickSort
 
         int i = low - 1;
 
+        // This code ensures that everything on the left
+        // of the pivot is lower than everything on the right.
         for (int j = low; j < high; j++)
         {
             var next = arr[j];
