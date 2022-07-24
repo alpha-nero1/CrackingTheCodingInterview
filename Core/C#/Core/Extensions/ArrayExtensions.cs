@@ -18,7 +18,9 @@ namespace Core.Extensions
             return res;
         }
 
-        // Get back an exact copy of an array.
+        /// <summary>
+        /// Get back an exact copy of an array.
+        /// </summary>
         public static T[] DirectCopy<T>(this T[] arr)
         {
             T[] res = new T[arr.Length];
@@ -30,6 +32,17 @@ namespace Core.Extensions
                 arr.Length
             );
             return res;
+        }
+
+        /// <summary>
+        /// Swap array positions.
+        /// </summary>
+        public static void Swap<T>(this T[] arr, int i, int j)
+        {
+            if (i == j) return;
+            var temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
         }
     }
 }

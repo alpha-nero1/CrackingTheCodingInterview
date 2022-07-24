@@ -115,4 +115,28 @@ public class SortingTests
             Assert.True(curr <= prev, "Array is out of order");
         }
     }
+
+    [Fact]
+    public void QuickSortAsc()
+    {
+        var res = QuickSort.Sort(_testingArr);
+        for (int i = 1; i < res.Length; i++)
+        {
+            var prev = res[i - 1];
+            var curr = res[i];
+            Assert.True(curr >= prev, "Array is out of order");
+        }
+    }
+
+    [Fact]
+    public void QuickSortDesc()
+    {
+        var res = QuickSort.Sort(_testingArr, false);
+        for (int i = 1; i < res.Length; i++)
+        {
+            var prev = res[i - 1];
+            var curr = res[i];
+            Assert.True(curr <= prev, "Array is out of order");
+        }
+    }
 }
