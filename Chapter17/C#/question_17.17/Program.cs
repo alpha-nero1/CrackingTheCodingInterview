@@ -1,69 +1,44 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿/*
+    17.17 Multi-Search.
+*/
+
+using question_17._17;
+
+var res = SearchAll("missisipi", new string[] { "is", "ppi", "hi", "sis", "i", "ssippi" });
 
 
-public class Trie
+Dictionary<string, List<int>> SearchAll(string big, string[] smalls)
 {
+    Dictionary<string, List<int>> lookup = new Dictionary<string, List<int>>();
+    Trie trie = CreateTrieFromString(big);
+    foreach (var s in smalls)
+    {
+        Console.WriteLine("Searching for {0}", s);
+        List<int> locations = trie.Search(s);
 
-
+        Console.WriteLine("Locations = {0}", locations != null ? String.Join(", ", locations) : null);
+    }
+    return lookup;
 }
 
-public class TrieNode
+
+void SubtractValue(List<int> locations, int delta)
 {
-    private Dictionary<char, TrieNode> _children = new Dictionary<char, TrieNode>();
-    private List<int> _indexes = new List<int>();
-    private char _char;
-
-    public TrieNode() {}
-
-    public TrieNode(char character)
+    if (locations == null) return;
+    for (int i = 0; i < locations.Count; i++)
     {
-        _char = character;
+        locations[i] = (locations[i] - delta);
     }
+}
 
-    public void InsertString(string remainingString, int index)
+
+Trie CreateTrieFromString(string s)
+{
+    Trie trie = new Trie();
+    for (int i = 0; i < s.Length; i++)
     {
-        _indexes.Add(index);
-        if (String.IsNullOrWhiteSpace(remainingString))
-        {
-            _children['\0'] = new TrieNode();
-        };
-
-        // Get the next char for what is remaining.
-        var nextChar = remainingString[0];
-        var nextChild = new TrieNode();
-
-        if (_children.ContainsKey(nextChar))
-        {
-            // If we already have the next char then
-            nextChild = _children[nextChar];
-        }
-
-        var remaining = remainingString.Substring(1);
-        nextChild.InsertString(remainingString, index + 1);
+        string suffx = s.Substring(1);
+        trie.Root.InsertString(suffx, i);
     }
-
-    public List<int> Search(string s)
-    {
-        if (String.IsNullOrWhiteSpace(s)) return _indexes;
-
-        char first = s[0];
-
-        if (_children.ContainsKey(first))
-        {
-            string remainder = s.Substring(1);
-            return _children[first].Search(remainder);
-        }
-
-        return null;
-    }
-
-    public bool Terminates()
-    {
-        return _children.ContainsKey('\0');
-    }
-
-    public TrieNode GetChild(char c)
-    {
-        return _children.GetValueOrDefault(c);
-    }
+    return trie;
 }

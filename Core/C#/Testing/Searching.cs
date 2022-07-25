@@ -13,6 +13,8 @@ public class SearchingTests
         20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
         31, 32, 33, 34, 35, 36, 37, 38, 39
     };
+    private string[] _keys = { "the", "a", "there", "answer", "any", "by", "bye", "their" };
+
     private readonly ITestOutputHelper _output;
 
     public SearchingTests(ITestOutputHelper output)
@@ -176,5 +178,16 @@ public class SearchingTests
     {
         var res = FibonacciSearch.Search(_testingArray, value);
         Assert.True(res == expectedIndex, "Incorrect index returned for fibonacci search.");
+    }
+
+    [Theory]
+    [InlineData("any")]
+    [InlineData("there")]
+    [InlineData("their")]
+    public void TrieSearch(string key)
+    {
+        var trie = new Trie();
+        trie.InsertKeys(_keys);
+        Assert.True(trie.Search(key), "Key not found in trie");
     }
 }
