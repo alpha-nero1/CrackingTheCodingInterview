@@ -65,6 +65,7 @@ first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 - 178 / 189 (94.1) (includes 17.15)
 - 179 / 189 (94.7) (includes 17.16)
 - 180 / 189 (95.2) (includes 17.17)
+- 181 / 189 (95.7) (includes 17.18)
 
 10. Sorting and Searching [X]
 11. Testing [X]
