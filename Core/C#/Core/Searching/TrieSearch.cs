@@ -1,10 +1,10 @@
+/*
+    Trie, used to search man strings at once using an input string.
+*/
+
 using System;
 
 namespace Core.Searching;
-
-// Implement please.
-// https://www.geeksforgeeks.org/trie-insert-and-search/
-
 
 public class Trie
 {
