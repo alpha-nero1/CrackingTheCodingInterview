@@ -67,6 +67,8 @@ first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 - 180 / 189 (95.2) (includes 17.17)
 - 181 / 189 (95.7) (includes 17.18)
 - 182 / 189 (96.2) (includes 17.19)
+- 183 / 189 (96.8) (includes 17.20)
+- 184 / 189 (97.4) (includes 17.21)
 
 10. Sorting and Searching [X]
 11. Testing [X]
@@ -134,3 +136,4 @@ to understand the concept before programming.
 - 17.7 Really excellent use of Graphs to find similar name frequencies!
 - 17.9 (Kth Multiple) Very interesting algorithm, needs more time to comprehend.
 - 17.10 (Majority Element). Very clever way of getting the majority element in an array.
+- 17.21. (Volume of histogram). very clever way of using an array of maxes to simplify a problem.
