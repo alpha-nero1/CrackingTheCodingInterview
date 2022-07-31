@@ -6,7 +6,6 @@ using question_17._17;
 
 var res = SearchAll("missisipi", new string[] { "is", "ppi", "hi", "sis", "i", "ssippi" });
 
-
 Dictionary<string, List<int>> SearchAll(string big, string[] smalls)
 {
     Dictionary<string, List<int>> lookup = new Dictionary<string, List<int>>();
