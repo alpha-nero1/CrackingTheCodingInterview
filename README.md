@@ -70,6 +70,7 @@ first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 - 183 / 189 (96.8) (includes 17.20)
 - 184 / 189 (97.4) (includes 17.21)
 - 187 / 189 (98.9) (includes 17.24)
+- 188 / 189 (99.4) (includes 17.25)
 
 10. Sorting and Searching [X]
 11. Testing [X]
@@ -93,8 +94,9 @@ first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 - 16.18 - question does not make sense.
 
 ## Very interesting and not fully understood
-- 8.7
-- 8.11
+- 8.7.
+- 8.11.
+- 17.25. Word rectangle, must be a nicer way of doing this...
 
 ## Just mindblowing/awesome
 ### Chapter 8
