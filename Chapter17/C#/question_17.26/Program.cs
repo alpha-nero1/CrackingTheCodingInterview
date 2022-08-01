@@ -65,7 +65,3 @@ double ComputeSimilarity(Document docOne, Document docTwo)
 }
 
 #endregion;
-
-#region Optimised
-
-#endregion;

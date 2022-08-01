@@ -7,6 +7,7 @@ namespace Core.DataStructures.LinkedList
     public class LinkedList<T> : ILinkedList<T>
     {
         private Node<T> _head;
+        private Node<T> _tail;
         public int Count { get; private set; }
 
         public LinkedList() {}
@@ -52,12 +53,43 @@ namespace Core.DataStructures.LinkedList
             }
 
             tail.Next = newNode;
+            _tail = newNode;
+        }
+
+        public void RemoveAt(int index)
+        {
+            int i = 0;
+
+            var current = _head;
+            Node<T> prev = null;
+            while (current != null)
+            {
+                if (index == i)
+                {
+                    // Remove current!
+                    if (prev != null)
+                    {
+                        prev.Next = current.Next;
+                        Count -= 1;
+                        return;
+                    }
+                    if (prev == null)
+                    {
+                        _head = current.Next;
+                        Count -= 1;
+                        return;
+                    }
+                }
+                i += 1;
+                prev = current;
+                current = current.Next;
+            }
         }
 
         public T Remove(T value)
         {
             var current = _head;
-            Node<T>? prev = null;
+            Node<T> prev = null;
             while (current != null)
             {
                 if (EqualityComparer<T>.Default.Equals(current.Value, value))
@@ -76,6 +108,7 @@ namespace Core.DataStructures.LinkedList
                     if (next == null)
                     {
                         prev.Next = null;
+                        _tail = prev;
                         Count -= 1;
                         return value;
                     }

@@ -9,6 +9,11 @@ namespace Core.DataStructures.LinkedList
     public interface ILinkedList<T> : IEnumerable<T>
     {
         /// <summary>
+        /// Array index accessor.
+        /// </summary>
+        T this[int index] { get; set; }
+
+        /// <summary>
         /// Total count of elements in the linked list.
         /// </summary>
         int Count { get; }
@@ -22,6 +27,11 @@ namespace Core.DataStructures.LinkedList
         /// Remove an item from the list.
         /// </summary>
         T Remove(T value);
+
+        /// <summary>
+        /// Remove item at index.
+        /// </summary>
+        void RemoveAt(int index);
 
         /// <summary>
         /// Get last item in the list.

@@ -63,6 +63,30 @@ public class LinkedListTests
         IterationTest(10000);
     }
 
+    [Theory]
+    [InlineData(0)]
+    [InlineData(1)]
+    [InlineData(2)]
+    [InlineData(3)]
+    [InlineData(9)]
+    private void RemoveAtIndex(int index)
+    {
+        var ll = new LinkedList<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+        int countBeforeRemove = ll.Count;
+        bool removingLast = index == countBeforeRemove - 1;
+        var before = ll[index];
+        ll.RemoveAt(index);
+
+        Assert.True(
+            (
+                removingLast ?
+                ll.Count == countBeforeRemove - 1
+                : ll[index] == before + 1
+            ),
+            "Values match after RemoveAt"
+        );
+    }
+
     private void IterationTest(int iterations)
     {
         var ll = new LinkedList<int>();
