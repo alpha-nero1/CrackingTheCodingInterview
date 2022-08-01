@@ -43,7 +43,7 @@ namespace Core.DataStructures.LinkedList
         public void Add(T value)
         {
             Count += 1;
-            var tail = GetTail();
+            var tail = _tail ?? GetTail();
             var newNode = new Node<T>(value);
 
             if (tail == null)
@@ -54,6 +54,14 @@ namespace Core.DataStructures.LinkedList
 
             tail.Next = newNode;
             _tail = newNode;
+        }
+
+        public void AddAll(IEnumerable<T> all)
+        {
+            foreach (var value in all)
+            {
+                Add(value);
+            }
         }
 
         public void RemoveAt(int index)

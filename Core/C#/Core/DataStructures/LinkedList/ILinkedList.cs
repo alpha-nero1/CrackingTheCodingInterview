@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Collections;
 
 namespace Core.DataStructures.LinkedList
 {
@@ -22,6 +21,8 @@ namespace Core.DataStructures.LinkedList
         /// Add an item to the list.
         /// </summary>
         void Add(T value);
+
+        void AddAll(IEnumerable<T> all);
 
         /// <summary>
         /// Remove an item from the list.

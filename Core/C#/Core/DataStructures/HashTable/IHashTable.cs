@@ -6,8 +6,10 @@ namespace Core.DataStructures
     /// Custom C# hashtable implementation.
     /// </summary>
     /// <typeparam name="T">Type of hashtable values.</typeparam>
-    public interface IHashTable<T>
+    public interface IHashTable<T> : IEnumerable<string>
     {
+        T this[string key] { get; set; }
+
         /// <summary>
         /// Get a value from the hashtable using a key.
         /// </summary>
