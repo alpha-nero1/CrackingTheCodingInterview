@@ -71,6 +71,7 @@ first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 - 184 / 189 (97.4) (includes 17.21)
 - 187 / 189 (98.9) (includes 17.24)
 - 188 / 189 (99.4) (includes 17.25)
+- 189 / 189 (100.0) (includes 17.26)
 
 10. Sorting and Searching [X]
 11. Testing [X]
@@ -80,7 +81,7 @@ first 7 chapters progress = 9 + 8 + 6 + 12 + 8 + 10 + 9 = 62
 14. Databases [X]
 15. Threads and locks [X]
 16. Moderate [X]
-17. Hard []
+17. Hard [X]
 
 ## Nice VSCode shortcuts.
 - `home`: cursor to start of line.
