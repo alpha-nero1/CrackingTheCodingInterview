@@ -28,7 +28,7 @@ public class Trie : ITrie
 
 class TrieNode
 {
-    private IHashTable<TrieNode> _nodes = new HashTable<TrieNode>();
+    private IHashTable<string, TrieNode> _nodes = new HashTable<string, TrieNode>();
 
     public void Add(string word)
     {

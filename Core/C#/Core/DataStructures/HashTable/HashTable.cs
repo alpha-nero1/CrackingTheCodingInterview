@@ -6,10 +6,11 @@ using System.Collections;
 
 namespace Core.DataStructures.HashTable;
 
-public class HashTable<T> : IHashTable<T> {
+public class HashTable<TKey, TData> : IHashTable<TKey, TData>
+{
     private static int INITIAL_ARRAY_SIZE = 1000;
 
-    private LinkedList<ChainNode<T>>[] _entries = new LinkedList<ChainNode<T>>[INITIAL_ARRAY_SIZE];
+    private LinkedList<ChainNode<TKey, TData>>[] _entries = new LinkedList<ChainNode<TKey, TData>>[INITIAL_ARRAY_SIZE];
 
     private int _collisionCount = 0;
 
@@ -17,7 +18,7 @@ public class HashTable<T> : IHashTable<T> {
 
     public HashTable() {}
 
-    public HashTable(IEnumerable<KeyValuePair<string, T>> keyValuePairs) {
+    public HashTable(IEnumerable<KeyValuePair<TKey, TData>> keyValuePairs) {
         if (keyValuePairs.Count() > 0) {
             foreach (var keyValuePair in keyValuePairs)
             {
@@ -27,45 +28,45 @@ public class HashTable<T> : IHashTable<T> {
     }
 
     // This property def allows access via [] syntax.
-    public T this[string key]
+    public TData this[TKey key]
     {
         get { return Get(key); }
 
         set { Set(key, value); }
     }
 
-    public T Get(string key) {
+    public TData Get(TKey key) {
         if (key != null) {
             int hashIndex = Hash(key, _entries.Length);
-            LinkedList<ChainNode<T>> chain = _entries[hashIndex];
-            foreach (ChainNode<T> node in chain) {
-                if (node.Key == key) return node.Value;
+            LinkedList<ChainNode<TKey, TData>> chain = _entries[hashIndex];
+            foreach (ChainNode<TKey, TData> node in chain) {
+                if (EqualityComparer<TKey>.Default.Equals(key, node.Key)) return node.Value;
             }
         }
         return default;
     }
 
-    public IEnumerable<T> Values() => Items().Select(x => x.Value);
+    public IEnumerable<TData> Values() => Items().Select(x => x.Value);
 
-    public IEnumerable<string> Keys() => Items().Select(x => x.Key);
+    public IEnumerable<TKey> Keys() => Items().Select(x => x.Key);
 
-    public bool Has(string key) {
-        return !EqualityComparer<T>.Default.Equals(Get(key), default(T));
+    public bool Has(TKey key) {
+        return !EqualityComparer<TData>.Default.Equals(Get(key), default(TData));
     }
 
-    public void Set(string key, T value) {
-        if (String.IsNullOrWhiteSpace(key)) return;
+    public void Set(TKey key, TData value) {
+        if (key == null) return;
 
         int hashIndex = Hash(key, _entries.Length);
 
         _insertionCount += 1;
-        var newNode = new ChainNode<T>(key, value, _insertionCount);
+        var newNode = new ChainNode<TKey, TData>(key, value, _insertionCount);
         // Set the value in its chain.
-        LinkedList<ChainNode<T>> chain = _entries[hashIndex];
+        LinkedList<ChainNode<TKey, TData>> chain = _entries[hashIndex];
 
         if (chain != null) {
             // If we find our item in the chain, replace value.
-            ChainNode<T> existingNode = FindNodeByKey(key, chain);
+            ChainNode<TKey, TData> existingNode = FindNodeByKey(key, chain);
             if (existingNode != null) {
                 chain.Remove(existingNode);
             } else if (chain.Count > 0) {
@@ -73,11 +74,11 @@ public class HashTable<T> : IHashTable<T> {
                 _collisionCount += 1;
             }
         } else {
-            chain = new LinkedList<ChainNode<T>>();
+            chain = new LinkedList<ChainNode<TKey, TData>>();
             _entries[hashIndex] = chain;
         }
         if (chain.Last != null && chain.Last.Value != null) {
-            ChainNode<T> last = chain.Last.Value;
+            ChainNode<TKey, TData> last = chain.Last.Value;
             if (last != null) {
                 last.SetNext(newNode);
             }
@@ -85,20 +86,20 @@ public class HashTable<T> : IHashTable<T> {
         chain.AddLast(newNode);
     }
 
-    public void Remove(string key) {
-        if (String.IsNullOrWhiteSpace(key)) return;
+    public void Remove(TKey key) {
+        if (key == null) return;
 
         int hashIndex = Hash(key, _entries.Length);
-        LinkedList<ChainNode<T>> chain = _entries[hashIndex];
+        LinkedList<ChainNode<TKey, TData>> chain = _entries[hashIndex];
         if (chain == null) return;
 
-        ChainNode<T> nodeToRemove = FindNodeByKey(key, chain);
+        ChainNode<TKey, TData> nodeToRemove = FindNodeByKey(key, chain);
         if (nodeToRemove != null) chain.Remove(nodeToRemove);
     }
 
     public void Clear()
     {
-        _entries = new LinkedList<ChainNode<T>>[INITIAL_ARRAY_SIZE];
+        _entries = new LinkedList<ChainNode<TKey, TData>>[INITIAL_ARRAY_SIZE];
         _collisionCount = 0;
         _insertionCount = 0;
     }
@@ -107,12 +108,12 @@ public class HashTable<T> : IHashTable<T> {
         string str = "{\n";
         bool hasPassedFirst = false;
         for (var i = 0; i < _entries.Length; i++) {
-            LinkedList<ChainNode<T>> chain = _entries[i];
+            LinkedList<ChainNode<TKey, TData>> chain = _entries[i];
             if (chain != null && chain.First != null) {
-                ChainNode<T> node = chain.First.Value;
+                ChainNode<TKey, TData> node = chain.First.Value;
                 while (node != null) {
-                    string chainItemKey = node.Key;
-                    T chainItemValue = node.Value;
+                    TKey chainItemKey = node.Key;
+                    TData chainItemValue = node.Value;
                     System.Type valueType = chainItemValue.GetType();
                     if (hasPassedFirst) {
                         // We are not at the very last entry.
@@ -136,7 +137,15 @@ public class HashTable<T> : IHashTable<T> {
 
     #region Private helper methods.
 
-    private int Hash(string key, int max) {
+    private int Hash(TKey key, int max)
+    {
+        if (key is string) return HashString((string)(object) key, max);
+        long hash = 17 * key.GetHashCode();
+        return (int) hash % max;
+    }
+
+    // Just to flex that we understand how the hashing works...
+    private int HashString(string key, int max) {
         long totalHash = 0;
         int prime = 17;
         if (key != null && key.Length > 0) {
@@ -151,33 +160,33 @@ public class HashTable<T> : IHashTable<T> {
         return -1;
     }
 
-    private ChainNode<T> FindNodeByKey(string key, LinkedList<ChainNode<T>> chain) {
+    private ChainNode<TKey, TData> FindNodeByKey(TKey key, LinkedList<ChainNode<TKey, TData>> chain) {
         if (chain == null || chain.First == null) return null;
-        ChainNode<T> node = chain.First.Value;
+        ChainNode<TKey, TData> node = chain.First.Value;
         while (node != null) {
-            string nodeKey = node.Key;
-            if (nodeKey == key) return node;
+            TKey nodeKey = node.Key;
+            if (EqualityComparer<TKey>.Default.Equals(nodeKey, key)) return node;
             node = node.Next;
         }
         return null;
     }
 
-    private IEnumerable<KeyValuePair<string, T>> Items()
+    private IEnumerable<KeyValuePair<TKey, TData>> Items()
     {
         // Note, brute force approach for now, must be a better way...
-        var keys = new List<KeyValuePair<string, T>>();
+        var keys = new List<KeyValuePair<TKey, TData>>();
         var allItems = _entries.Where(x => x != null && x.Count() > 0);
         foreach (var item in allItems)
         {
             foreach (var node in item)
             {
-                keys.Add(new KeyValuePair<string, T>(node.Key, node.Value));
+                keys.Add(new KeyValuePair<TKey, TData>(node.Key, node.Value));
             }
         }
         return keys;
     }
 
-    public IEnumerator<string> GetEnumerator()
+    public IEnumerator<TKey> GetEnumerator()
     {
         return Keys().GetEnumerator();
     }
@@ -190,20 +199,28 @@ public class HashTable<T> : IHashTable<T> {
     #endregion
 }
 
-class ChainNode<T> {
-    public string Key { get; set; }
+/// <summary>
+/// Extension class assuming that keys are string.
+/// </summary>
+public class HashTable<TData> : HashTable<string, TData> {}
+
+/// <summary>
+/// Chain node class keeeping reference to our inserted elements.
+/// </summary>
+class ChainNode<TKey, TData> {
+    public TKey Key { get; set; }
     public int InsertionCountRef { get; set; }
-    public T Value { get; set; }
+    public TData Value { get; set; }
 
-    public ChainNode<T> Next { get; private set; }
+    public ChainNode<TKey, TData> Next { get; private set; }
 
-    public ChainNode(string key, T value, int insertionCountRef) {
+    public ChainNode(TKey key, TData value, int insertionCountRef) {
         Key = key;
         Value = value;
         InsertionCountRef = insertionCountRef;
     }
 
-    public void SetNext(ChainNode<T> next) {
+    public void SetNext(ChainNode<TKey, TData> next) {
         Next = next;
     }
 }
