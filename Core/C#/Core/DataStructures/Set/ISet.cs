@@ -2,9 +2,9 @@ using System.Collections.Generic;
 
 namespace Core.DataStructures.Set;
 
-public interface ISet : IEnumerable<string>
+public interface ISet<TData> : IEnumerable<TData>
 {
-    bool Has(string key);
-    void Add(string key);
-    void Remove(string key);
+    bool Has(TData key);
+    void Add(TData key);
+    void Remove(TData key);
 }

@@ -1,6 +1,6 @@
 // CPP utility functions.
 
 // Get string of bool.
-const char* BoolToString(bool b) {
+const char* boolToString(bool b) {
   return b ? "true" : "false";
 }
