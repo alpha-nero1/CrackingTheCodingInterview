@@ -6,6 +6,7 @@ public static class DateTimeExperiment
 {
     public static void Experiment()
     {
+        Console.WriteLine("\nRunning DateTimeExperiment...");
         var dNow = DateTime.Now;
         var dNowUtcLocalTime = DateTime.UtcNow.ToLocalTime();
         var dNowUtc = DateTime.UtcNow;

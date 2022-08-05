@@ -7,6 +7,7 @@ public static class GetHashCodeExperiment
 {
     public static void Experiment()
     {
+        Console.WriteLine("\nRunning GetHashCodeExperiment...");
         int a = 0;
         int b = 1;
         HashTable<string> c = new HashTable<string>();
@@ -35,10 +36,17 @@ public static class GetHashCodeExperiment
         var hashIndexE = (e.GetHashCode() * 17) % hashTableInnerSize;
         var hashIndexF = (f.GetHashCode() * 17) % hashTableInnerSize;
 
+        Console.WriteLine("Array positions:");
         Console.WriteLine(hashIndexC);
         Console.WriteLine(hashIndexD);
         Console.WriteLine(hashIndexE);
         Console.WriteLine(hashIndexF);
+
+        Console.WriteLine(ObjectEquals(c, d));
     }
 
+    private static bool ObjectEquals<TLeft, TRight>(TLeft left, TRight right)
+    {
+        return left.GetHashCode() == right.GetHashCode();
+    }
 }
