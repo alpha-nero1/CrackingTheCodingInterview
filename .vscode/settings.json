@@ -1,27 +1,25 @@
 {
     "files.associations": {
-        "*.html": "html",
-        "map": "cpp",
+        "ostream": "cpp",
         "array": "cpp",
+        "string_view": "cpp",
         "atomic": "cpp",
         "bit": "cpp",
         "*.tcc": "cpp",
-        "bitset": "cpp",
         "cctype": "cpp",
         "clocale": "cpp",
         "cmath": "cpp",
         "compare": "cpp",
-        "complex": "cpp",
         "concepts": "cpp",
         "cstdarg": "cpp",
         "cstddef": "cpp",
         "cstdint": "cpp",
         "cstdio": "cpp",
         "cstdlib": "cpp",
-        "cstring": "cpp",
         "cwchar": "cpp",
         "cwctype": "cpp",
         "deque": "cpp",
+        "string": "cpp",
         "unordered_map": "cpp",
         "vector": "cpp",
         "exception": "cpp",
@@ -31,10 +29,7 @@
         "memory": "cpp",
         "memory_resource": "cpp",
         "numeric": "cpp",
-        "optional": "cpp",
         "random": "cpp",
-        "string": "cpp",
-        "string_view": "cpp",
         "system_error": "cpp",
         "tuple": "cpp",
         "type_traits": "cpp",
@@ -45,16 +40,9 @@
         "istream": "cpp",
         "limits": "cpp",
         "new": "cpp",
-        "ostream": "cpp",
-        "ranges": "cpp",
-        "sstream": "cpp",
+        "numbers": "cpp",
         "stdexcept": "cpp",
         "streambuf": "cpp",
         "typeinfo": "cpp"
-    },
-    "editor.tokenColorCustomizations": {
-        "[Tokyo Night Storm]": {
-            "comments": "#4cd963d2"
-        }
     }
 }

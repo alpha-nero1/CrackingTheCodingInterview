@@ -141,3 +141,10 @@ to understand the concept before programming.
 - 17.9 (Kth Multiple) Very interesting algorithm, needs more time to comprehend.
 - 17.10 (Majority Element). Very clever way of getting the majority element in an array.
 - 17.21. (Volume of histogram). very clever way of using an array of maxes to simplify a problem.
+
+
+### Extended Backlog
+- Generics for C++ functions (try linear search first)
+- Write tests for C# Set, Queue and Stack
+- C++ write a sorting algorithm
+- C++ hashtable re-write with generics
