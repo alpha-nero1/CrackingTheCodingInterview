@@ -144,7 +144,8 @@ to understand the concept before programming.
 
 
 ### Extended Backlog
-- Generics for C++ functions (try linear search first)
-- Write tests for C# Set, Queue and Stack
-- C++ write a sorting algorithm
-- C++ hashtable re-write with generics
+- Generics for C++ functions (try linear search first) [x]
+- Write tests for C# Set, Queue and Stack [x]
+- C++ get unit tests running []
+- C++ write a sorting algorithm []
+- C++ hashtable re-write with generics []
