@@ -6,7 +6,7 @@ namespace Core.DataStructures.Set;
 
 public class Set<TData> : ISet<TData>
 {
-    public IHashTable<TData, bool?> _map { get; set; }
+    public IHashTable<TData, bool?> _map { get; set; } = new HashTable<TData, bool?>();
 
     public bool Has(TData key)
     {
@@ -21,6 +21,17 @@ public class Set<TData> : ISet<TData>
     public void Remove(TData key)
     {
         _map[key] = null;
+    }
+
+    public int Count()
+    {
+        int count = 0;
+        var values = _map.Values();
+        foreach (var val in values)
+        {
+            count += 1;
+        }
+        return count;
     }
 
     public IEnumerator<TData> GetEnumerator()

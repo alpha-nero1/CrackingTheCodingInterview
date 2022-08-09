@@ -95,6 +95,8 @@ public class HashTable<TKey, TData> : IHashTable<TKey, TData>
 
         ChainNode<TKey, TData> nodeToRemove = FindNodeByKey(key, chain);
         if (nodeToRemove != null) chain.Remove(nodeToRemove);
+        // Entirely delete if no more entries left in the chain.
+        if (chain.Count == 0) _entries[hashIndex] = null;
     }
 
     public void Clear()
@@ -180,7 +182,10 @@ public class HashTable<TKey, TData> : IHashTable<TKey, TData>
         {
             foreach (var node in item)
             {
-                keys.Add(new KeyValuePair<TKey, TData>(node.Key, node.Value));
+                if (node.Value != null)
+                {
+                    keys.Add(new KeyValuePair<TKey, TData>(node.Key, node.Value));
+                }
             }
         }
         return keys;
