@@ -49,4 +49,12 @@ E.g.
 - `g++ -o question-1.1 ./question-1.1.cpp`
 - `./question-1.1`
 
--- C++ --
+
+## Setting up C++ projects with CMake
+In order to set up projects like you would with pipenv or npm but for C++ you would use CMake.
+\
+To install CMake: https://cmake.org/install/
+\
+To set up CMake project: https://cmake.org/cmake/help/v3.16/guide/tutorial/index.html
+\
+To run CMake project: cd into the \Debug or \Make directory and run the `.exe`
