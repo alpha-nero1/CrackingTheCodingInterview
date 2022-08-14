@@ -1,3 +1,5 @@
+#include "linear-search.h"
+
 /*
     Performs a very simple linear search.
 */
@@ -10,21 +12,7 @@ using namespace std;
 // We need to pass in length because we can not accurately get the size of an array
 // outside the scope of it's definition, that is because at this point `int arr[]`
 // is transformed to int* arr
-int linearSearchInt(int value, int arr[], int length)
-{
-    for (int i = 0; i < length; i += 1)
-    {
-        if (arr[i] == value) return i;
-    }
-
-    return -1;
-}
-
-// Generic version of linear search.
-// typename denotes that the value generic has this name
-// but can be any instance type.
-template <typename TValue>
-int linearSearch(TValue value, TValue arr[], int length)
+int linear_search_int(int value, int arr[], int length)
 {
     for (int i = 0; i < length; i += 1)
     {
