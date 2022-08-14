@@ -23,7 +23,7 @@ string modify_text(string inner_text, string colour)
 {
     map<string, int> codes = get_colour_map();
     int code = codes[colour];
-    return "\n\033[1;" + to_string(code) + "m" + inner_text + "\033[0m";
+    return "\033[1;" + to_string(code) + "m" + inner_text + "\033[0m";
 }
 
 string red(string text)

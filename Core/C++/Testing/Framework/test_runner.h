@@ -8,7 +8,7 @@ class TestRunner
     public:
         TestRunner();
         int get_failed_tests();
-        void test_func(int (* test_func)());
+        void test_func(int (* test_func)(), string name = "Anonymous");
         void print_results();
 
     private:
