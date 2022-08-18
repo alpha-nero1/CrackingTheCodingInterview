@@ -106,7 +106,7 @@ void experiment_pointers_and_arrays() {
     // NOTE THAT POINTER ARITHMETIC IS MEANINGLESS UNLESS USED ON AN ARRAY.
     // Example:
     int arr_length = 10;
-    int values[arr_length] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    int values[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
     int* doubled_vals = new int[arr_length];
 
     // Arrays are simplified into *ptr when passed into funcs anyway.
