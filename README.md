@@ -146,6 +146,9 @@ to understand the concept before programming.
 ### Extended Backlog
 - Generics for C++ functions (try linear search first) [x]
 - Write tests for C# Set, Queue and Stack [x]
-- C++ get unit tests running []
+- C++ get unit tests running [x]
+- C++ complete project structure [x]
+- C++ write file on pointers and refs [x]
+- C# Use trie to return autocomplete results []
 - C++ write a sorting algorithm []
 - C++ hashtable re-write with generics []
