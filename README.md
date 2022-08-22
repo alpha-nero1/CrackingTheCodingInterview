@@ -149,6 +149,10 @@ to understand the concept before programming.
 - C++ get unit tests running [x]
 - C++ complete project structure [x]
 - C++ write file on pointers and refs [x]
+- C++ comprehensive example of multi dimenstional arrays and pointers []
 - C# Use trie to return autocomplete results []
 - C++ write a sorting algorithm []
 - C++ hashtable re-write with generics []
+- C++ build base and subclass classes []
+
+After this create a sample signal R messaging app []
